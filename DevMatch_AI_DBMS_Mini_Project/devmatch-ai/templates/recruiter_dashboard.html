@@ -13,13 +13,13 @@
 <div class="dashboard-grid recruiter-workspace">
   <div class="primary-column">
     <section class="surface" id="applicants">
-      <div class="surface-head"><div><h2>Applicants</h2><p class="muted">ATS match compares required skills with profile skills and extracted resume skills. Matches of {{ shortlist_threshold }}% or more are shortlisted automatically; change status at any time.</p></div></div>
+      <div class="surface-head"><div><h2>Applicants</h2><p class="muted">New applications with a skills match above {{ shortlist_threshold }}% are shortlisted; scores of {{ shortlist_threshold }}% or less are rejected automatically. Review the evidence and change any status when needed.</p></div></div>
       {% for application in applicants %}
         {% set ats = ats_match(application.developer, application.job) %}
         <article class="candidate-review">
           <div class="candidate-heading">
             <div><a class="name-link" href="{{ url_for('developer_detail', id=application.developer.id) }}">{{ application.developer.user.name }}</a><p>{{ application.job.title }} · {{ application.created_at.strftime('%d %b %Y') }}</p></div>
-            <div class="ats-score {{ 'ats-strong' if ats.score >= shortlist_threshold else 'ats-standard' }}"><strong>{{ ats.score }}%</strong><span>ATS skill match</span></div>
+            <div class="ats-score {{ 'ats-strong' if ats.recommend_shortlist else 'ats-standard' }}"><strong>{{ ats.score }}%</strong><span>ATS skill match</span></div>
           </div>
           <div class="ats-breakdown">
             <div><strong>Matched skills</strong>{% if ats.matched %}<div class="tags">{% for skill in ats.matched %}<span>{{ skill }}</span>{% endfor %}</div>{% else %}<p class="muted">No required skills matched yet.</p>{% endif %}</div>
@@ -28,7 +28,7 @@
           <div class="ats-evidence">
             <span>Profile: {{ ats.profile_matched|length }} matched</span>
             {% if ats.has_resume_analysis %}<span>Resume: {{ ats.resume_matched|length }} matched</span>{% else %}<span>Resume not analyzed</span>{% endif %}
-            {% if ats.recommend_shortlist and application.status != 'Shortlisted' %}<span class="shortlist-recommendation">Recommended for shortlist</span>{% endif %}
+            {% if ats.recommend_shortlist and application.status != 'Shortlisted' %}<span class="shortlist-recommendation">ATS suggests shortlist; recruiter status differs</span>{% elif not ats.recommend_shortlist and application.status != 'Rejected' %}<span class="shortlist-recommendation">ATS suggests reject; recruiter status differs</span>{% endif %}
           </div>
           <div class="candidate-actions">
             <a class="text-link" href="{{ url_for('developer_detail', id=application.developer.id) }}">View profile and resume</a>

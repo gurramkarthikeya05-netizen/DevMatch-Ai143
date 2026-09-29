@@ -1,0 +1,8 @@
+# Local MySQL runtime and data (includes generated credentials)
+mysql-local/
+mysql-8.4.11-winx64.zip
+mysql-8.4.11-winx64/
+
+# Packaged delivery files
+DevMatch_AI_MySQL_Supabase_Project.zip
+DevMatch_AI_MySQL_Supabase_Project/

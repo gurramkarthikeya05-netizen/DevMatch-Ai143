@@ -7,6 +7,7 @@
 	<title>{% block title %}DevMatch AI{% endblock %}</title>
 	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 	<link rel="stylesheet" href="{{ url_for('static', filename='career.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='career_ai.css') }}">
 </head>
 <body>
 	<header class="topbar">
@@ -16,6 +17,7 @@
 				<a class="nav-link" href="{{ url_for('jobs') }}">Find jobs</a>
 				{% if me %}
 					<a class="nav-link" href="{{ url_for('dashboard') }}">Dashboard</a>
+					{% if me.role=='developer' %}<a class="nav-link" href="{{ url_for('career_ai') }}">Gemini advisor</a>{% endif %}
 					<a class="nav-link" href="{{ url_for('settings') }}">Settings</a>
 					{% if me.role=='recruiter' %}<a class="nav-link" href="{{ url_for('developers') }}">Find talent</a>{% endif %}
 					<form method="post" action="{{ url_for('logout') }}" class="inline"><input type="hidden" name="csrf" value="{{ csrf }}"><button class="nav-logout">Log out</button></form>

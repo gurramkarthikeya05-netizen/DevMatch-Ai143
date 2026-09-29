@@ -2,9 +2,28 @@
 
 ## Rubric Summary
 
-The application uses ten related entities. Every application table has at least five attributes, a primary key, and a foreign-key relationship. `flask --app app verify-dbms` checks that each application table has at least five records, at least five attributes, and a relationship. Run the MySQL demonstration script to add the related audit-history table and its sample rows.
+The application uses ten related entities stored in MySQL. Every application table has at least five attributes, a primary key, and a relationship through a foreign key. `flask --app app verify-dbms` checks that each application table has at least five records, at least five attributes, and a relationship. Run the MySQL demonstration script to add the related audit-history table and its sample rows. Supabase is used only for private PDF storage.
 
 The deliverable is a web application that runs on desktop/laptop browsers. It is responsive on mobile browsers; it is not a native Android or iOS application.
+
+## Relational Schema Diagram
+
+```text
+users (PK id)
+  ├── developer_profiles (PK id, FK/UNIQUE user_id → users.id)
+  │     ├── skills (PK id, FK developer_id → developer_profiles.id)
+  │     ├── projects (PK id, FK developer_id → developer_profiles.id)
+  │     │     └── project_technologies (PK id, FK project_id → projects.id)
+  │     ├── resume_analysis (PK id, FK developer_id → developer_profiles.id)
+  │     └── applications (PK id, FK developer_id → developer_profiles.id,
+  │                         FK job_id → jobs.id, UNIQUE developer_id + job_id)
+  │           └── application_status_history (PK id, FK application_id → applications.id)
+  └── recruiter_profiles (PK id, FK/UNIQUE user_id → users.id)
+        └── jobs (PK id, FK recruiter_id → recruiter_profiles.id)
+              └── job_skills (PK id, FK job_id → jobs.id)
+```
+
+The audit table is added by `mysql_demo.sql`. All other tables are created from the SQLAlchemy models in `app.py`.
 
 ## ER Diagram
 
