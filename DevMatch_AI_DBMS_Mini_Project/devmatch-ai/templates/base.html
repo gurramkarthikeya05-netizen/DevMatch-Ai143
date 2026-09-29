@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#0b1f3a">
+	<title>{% block title %}DevMatch AI{% endblock %}</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='career.css') }}">
+</head>
+<body>
+	<header class="topbar">
+		<div class="shell nav">
+			<a class="brand" href="{{ url_for('index') }}"><span class="brand-mark">D</span><span>DevMatch</span><em>AI</em></a>
+			<nav aria-label="Main navigation">
+				<a class="nav-link" href="{{ url_for('jobs') }}">Find jobs</a>
+				{% if me %}
+					<a class="nav-link" href="{{ url_for('dashboard') }}">Dashboard</a>
+					<a class="nav-link" href="{{ url_for('settings') }}">Settings</a>
+					{% if me.role=='recruiter' %}<a class="nav-link" href="{{ url_for('developers') }}">Find talent</a>{% endif %}
+					<form method="post" action="{{ url_for('logout') }}" class="inline"><input type="hidden" name="csrf" value="{{ csrf }}"><button class="nav-logout">Log out</button></form>
+				{% else %}
+					<a class="nav-link" href="{{ url_for('login') }}">Log in</a>
+					<a class="nav-cta" href="{{ url_for('register') }}">Register free</a>
+				{% endif %}
+			</nav>
+		</div>
+	</header>
+	<main class="shell">
+		{% with messages=get_flashed_messages(with_categories=true) %}
+			{% for category,message in messages %}<div class="flash {{ category }}" role="status">{{ message }}</div>{% endfor %}
+		{% endwith %}
+		{% block content %}{% endblock %}
+	</main>
+	<footer class="shell footer"><span>DevMatch AI</span><span>Developer careers, portfolios and hiring</span></footer>
+	<dialog class="skill-details-dialog" aria-labelledby="skill-details-title">
+		<div class="skill-dialog-heading"><div><span class="settings-overline">PROFILE SKILL</span><h2 id="skill-details-title">Skill details</h2></div><button type="button" class="skill-dialog-close" aria-label="Close skill details" data-close-skill-dialog>×</button></div>
+		<form method="post" id="skill-detail-form">
+			<input type="hidden" name="csrf" value="{{ csrf }}">
+			<label>Skill name<input name="name" maxlength="80" required></label>
+			<label>Proficiency<select name="level" required><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select></label>
+			<label>Years of experience<input name="years" type="number" min="0" max="50" step="0.5" required></label>
+			<button class="button small" type="submit">Save skill details</button>
+		</form>
+	</dialog>
+	<button class="selection-copy" type="button" hidden>Copy selection</button>
+	<div class="copy-toast" role="status" aria-live="polite"></div>
+	<script>
+		const themeStorageKey = 'devmatch-theme';
+		const themeInputs = document.querySelectorAll('[name="theme"]');
+		function setTheme(theme, save = false) {
+			document.documentElement.dataset.theme = theme;
+			if (save) localStorage.setItem(themeStorageKey, theme);
+			themeInputs.forEach((input) => { input.checked = input.value === theme; });
+		}
+		setTheme(localStorage.getItem(themeStorageKey) || 'light');
+		themeInputs.forEach((input) => input.addEventListener('change', () => setTheme(input.value, true)));
+
+		const skillDialog = document.querySelector('.skill-details-dialog');
+		const skillForm = document.querySelector('#skill-detail-form');
+		document.querySelectorAll('#skills .skill-tags > span').forEach((chip) => {
+			const removeForm = chip.querySelector('form[action*="/skills/"]');
+			const match = removeForm?.action.match(/\/skills\/(\d+)\/delete$/);
+			if (!match) return;
+			const detailsButton = document.createElement('button');
+			detailsButton.type = 'button';
+			detailsButton.className = 'skill-details-button';
+			detailsButton.textContent = 'Details';
+			detailsButton.setAttribute('aria-label', `View ${chip.firstChild.textContent.trim()} skill details`);
+			chip.insertBefore(detailsButton, removeForm);
+			detailsButton.addEventListener('click', async () => {
+				const response = await fetch(`/skills/${match[1]}/details`, { headers: { Accept: 'application/json' } });
+				if (!response.ok) return;
+				const skill = await response.json();
+				skillForm.action = `/skills/${skill.id}`;
+				skillForm.elements.name.value = skill.name;
+				skillForm.elements.level.value = skill.level;
+				skillForm.elements.years.value = skill.years;
+				skillDialog.showModal();
+			});
+		});
+		document.querySelector('[data-close-skill-dialog]').addEventListener('click', () => skillDialog.close());
+
+		const selectionCopy = document.querySelector('.selection-copy');
+		document.addEventListener('selectionchange', () => {
+			const selection = window.getSelection();
+			selectionCopy.hidden = !selection || !selection.toString().trim();
+		});
+		selectionCopy.addEventListener('mousedown', (event) => event.preventDefault());
+		selectionCopy.addEventListener('click', async () => {
+			const text = window.getSelection()?.toString().trim();
+			if (!text) return;
+			try {
+				await navigator.clipboard.writeText(text);
+			} catch {
+				const input = document.createElement('textarea');
+				input.value = text;
+				input.setAttribute('readonly', '');
+				input.style.position = 'fixed';
+				input.style.opacity = '0';
+				document.body.append(input);
+				input.select();
+				document.execCommand('copy');
+				input.remove();
+			}
+			selectionCopy.textContent = 'Copied';
+			window.setTimeout(() => { selectionCopy.textContent = 'Copy selection'; }, 1400);
+		});
+		document.addEventListener('click', async (event) => {
+			const button = event.target.closest('[data-copy]');
+			if (!button) return;
+			const value = button.dataset.copy || '';
+			try {
+				await navigator.clipboard.writeText(value);
+				button.textContent = 'Copied';
+				window.setTimeout(() => { button.textContent = button.dataset.copyLabel || 'Copy'; }, 1400);
+			} catch {
+				const input = document.createElement('textarea');
+				input.value = value;
+				input.setAttribute('readonly', '');
+				input.style.position = 'fixed';
+				input.style.opacity = '0';
+				document.body.append(input);
+				input.select();
+				document.execCommand('copy');
+				input.remove();
+				button.textContent = 'Copied';
+				window.setTimeout(() => { button.textContent = button.dataset.copyLabel || 'Copy'; }, 1400);
+			}
+		});
+	</script>
+</body>
+</html>

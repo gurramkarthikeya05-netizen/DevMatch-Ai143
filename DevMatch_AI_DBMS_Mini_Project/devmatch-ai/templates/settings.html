@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% block title %}Settings · DevMatch AI{% endblock %}
+{% block content %}
+<header class="settings-intro">
+  <div class="eyebrow dark">ACCOUNT CONTROL</div>
+  <h1>Settings</h1>
+  <p>Manage your profile, password, and display preferences.</p>
+</header>
+
+<div class="settings-layout">
+  <section class="surface settings-section" id="appearance">
+    <div class="settings-title">
+      <div><span class="settings-overline">DISPLAY</span><h2>Appearance</h2></div>
+      <p>Choose how DevMatch looks on this device.</p>
+    </div>
+    <fieldset class="theme-picker">
+      <legend class="visually-hidden">Choose a color theme</legend>
+      <label><input type="radio" name="theme" value="light"><span>Light</span></label>
+      <label><input type="radio" name="theme" value="dark"><span>Dark</span></label>
+    </fieldset>
+  </section>
+
+  <section class="surface settings-section" id="profile">
+    <div class="settings-title">
+      <div><span class="settings-overline">PUBLIC PROFILE</span><h2>Profile information</h2></div>
+      <p>Changes are saved to your account.</p>
+    </div>
+    <details class="settings-disclosure">
+      <summary>Edit profile information</summary>
+      <form method="post" action="{{ url_for('update_profile') }}" class="form-grid settings-form">
+        <input type="hidden" name="csrf" value="{{ csrf }}">
+        {% if me.role == 'developer' %}
+          <label>Name<input name="name" value="{{ me.name }}" required maxlength="120" autocomplete="name"></label>
+          <label>Phone<input name="phone" value="{{ me.developer.phone }}" maxlength="30" autocomplete="tel"></label>
+          <label>Location<input name="location" value="{{ me.developer.location }}" maxlength="100" autocomplete="address-level2"></label>
+          <label>Education<input name="education" value="{{ me.developer.education }}" maxlength="160"></label>
+          <label>Experience<input name="experience" value="{{ me.developer.experience }}" maxlength="160"></label>
+          <label>GitHub URL<input name="github_url" value="{{ me.developer.github_url }}" maxlength="250" type="url"></label>
+          <label>LinkedIn URL<input name="linkedin_url" value="{{ me.developer.linkedin_url }}" maxlength="250" type="url"></label>
+          <label class="span-2">About you<textarea name="bio" rows="4">{{ me.developer.bio }}</textarea></label>
+        {% else %}
+          <label>Company name<input name="company_name" value="{{ me.recruiter.company_name }}" maxlength="140"></label>
+          <label>Location<input name="location" value="{{ me.recruiter.location }}" maxlength="100"></label>
+          <label class="span-2">Company website<input name="website" value="{{ me.recruiter.website }}" maxlength="250" type="url"></label>
+          <label class="span-2">Company description<textarea name="company_description" rows="5">{{ me.recruiter.company_description }}</textarea></label>
+        {% endif %}
+        <div class="settings-form-actions"><button class="button small" type="submit">Save profile</button></div>
+      </form>
+    </details>
+  </section>
+
+  <section class="surface settings-section" id="security">
+    <div class="settings-title">
+      <div><span class="settings-overline">ACCOUNT SECURITY</span><h2>Password</h2></div>
+      <p>Remembered sessions expire after 30 minutes of inactivity. Browser sessions end when you close your browser.</p>
+    </div>
+    <form method="post" action="{{ url_for('update_password') }}" class="form-grid settings-form password-form">
+      <input type="hidden" name="csrf" value="{{ csrf }}">
+      <label class="span-2">Current password<input name="current_password" type="password" required autocomplete="current-password"></label>
+      <label>New password<input name="new_password" type="password" required minlength="8" autocomplete="new-password"></label>
+      <label>Confirm new password<input name="confirm_password" type="password" required minlength="8" autocomplete="new-password"></label>
+      <p class="helper-text span-2">Use at least 8 characters with uppercase, lowercase, a number, and a symbol. You’ll be asked to sign in again after changing it.</p>
+      <div class="settings-form-actions"><button class="button small" type="submit">Update password</button></div>
+    </form>
+  </section>
+
+  <section class="surface settings-section" id="session">
+    <div class="settings-title">
+      <div><span class="settings-overline">SESSION CONTROL</span><h2>Sign-in state</h2></div>
+      <p>End this session when you’re finished on a shared device.</p>
+    </div>
+    <form method="post" action="{{ url_for('logout') }}">
+      <input type="hidden" name="csrf" value="{{ csrf }}">
+      <button class="button secondary small" type="submit">Log out</button>
+    </form>
+  </section>
+</div>
+{% endblock %}

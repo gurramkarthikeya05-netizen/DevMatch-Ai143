@@ -1,0 +1,10 @@
+Flask>=3.0,<4
+Flask-SQLAlchemy>=3.1,<4
+Flask-Limiter[redis]>=3.8,<5
+PyMySQL>=1.1,<2
+psycopg[binary]>=3.2,<4
+PyMuPDF>=1.24,<2
+requests>=2.31,<3
+python-dotenv>=1.0,<2
+gunicorn>=22,<24
+supabase>=2.10,<3

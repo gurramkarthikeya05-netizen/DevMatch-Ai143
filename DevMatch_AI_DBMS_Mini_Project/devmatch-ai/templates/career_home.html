@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% block title %}Find Your Next Role · DevMatch AI{% endblock %}
+{% block content %}
+<section class="portal-hero">
+  <div class="portal-hero-copy">
+    <span class="portal-kicker">YOUR NEXT OPPORTUNITY STARTS HERE</span>
+    <h1>Make your next<br><span>career move.</span></h1>
+    <p>Discover developer roles, showcase your work, and connect with teams building what’s next.</p>
+    <div class="portal-hero-actions">
+      <a class="portal-button" href="{{ url_for('jobs') }}">Explore jobs <span aria-hidden="true">→</span></a>
+      <a class="portal-quiet-link" href="{{ url_for('register') }}">Create a free profile</a>
+    </div>
+    <div class="portal-proof"><strong>{{ total }}+</strong><span>roles to explore</span><i></i><strong>Skills first</strong><span>real profile matching</span></div>
+  </div>
+  <div class="portal-art" aria-hidden="true">
+    <div class="art-index">DEV / CAREERS / 2026</div>
+    <div class="art-orbit orbit-one"></div>
+    <div class="art-orbit orbit-two"></div>
+    <div class="art-core"><span>DM</span><small>FIND YOUR FIT</small></div>
+    <div class="art-note note-top"><span class="note-dot"></span> New roles every week</div>
+    <div class="art-note note-bottom"><strong>01</strong><span>Profile<br>to opportunity</span></div>
+  </div>
+</section>
+
+<section class="portal-search" aria-labelledby="search-title">
+  <div class="portal-search-heading">
+    <span class="portal-kicker dark">SEARCH THE MARKET</span>
+    <h2 id="search-title">What are you looking for?</h2>
+  </div>
+  <form class="portal-search-form" method="get" action="{{ url_for('jobs') }}">
+    <label><span>Job title or skill</span><input name="q" placeholder="e.g. Python developer"></label>
+    <label><span>City or work style</span><input name="location" placeholder="e.g. Bengaluru or Remote"></label>
+    <button type="submit" class="portal-button">Search jobs <span aria-hidden="true">→</span></button>
+  </form>
+  <div class="popular-searches"><span>Popular:</span><a href="{{ url_for('jobs', q='Python') }}">Python</a><a href="{{ url_for('jobs', q='Frontend') }}">Frontend</a><a href="{{ url_for('jobs', q='Data') }}">Data</a><a href="{{ url_for('jobs', location='Remote') }}">Remote</a></div>
+</section>
+
+<section class="portal-section">
+  <div class="portal-section-heading">
+    <div><span class="portal-kicker dark">FIND YOUR DIRECTION</span><h2>Explore by role</h2></div>
+    <a href="{{ url_for('jobs') }}" class="portal-section-link">All opportunities <span aria-hidden="true">↗</span></a>
+  </div>
+  <div class="role-grid">
+    {% for role in ['Backend Developer', 'Frontend Developer', 'Full Stack Engineer', 'Data & AI', 'Cloud & DevOps', 'Product Design'] %}
+      <a class="role-item" href="{{ url_for('jobs', q=role) }}"><span class="role-mark">{{ '%02d'|format(loop.index) }}</span><span>{{ role }}</span><span class="role-arrow" aria-hidden="true">↗</span></a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="portal-section latest-section">
+  <div class="portal-section-heading">
+    <div><span class="portal-kicker dark">FRESH FROM EMPLOYERS</span><h2>Recently posted jobs</h2></div>
+    <a href="{{ url_for('jobs') }}" class="portal-section-link">Browse all jobs <span aria-hidden="true">↗</span></a>
+  </div>
+  {% if jobs %}
+    <div class="portal-job-list">
+      {% for job in jobs %}
+        <article class="portal-job-card">
+          <div class="portal-company-mark">{{ job.recruiter.company_name[:1]|upper }}</div>
+          <div class="portal-job-main">
+            <div class="portal-company-line">{{ job.recruiter.company_name }} <span>·</span> {{ job.location }}</div>
+            <h3>{{ job.title }}</h3>
+            <div class="portal-job-meta"><span>{{ job.job_type }}</span><span>{{ job.experience_required }}</span><span>{{ job.salary }}</span></div>
+            <div class="portal-skill-list">{% for skill in job.required_skills.split(',')[:4] %}<span>{{ skill.strip() }}</span>{% endfor %}</div>
+          </div>
+          <div class="portal-job-actions">
+            <button type="button" class="copy-button" data-copy="{{ job.title }} | {{ job.recruiter.company_name }} | {{ job.location }} | {{ job.salary }} | Skills: {{ job.required_skills }}" data-copy-label="Copy details" aria-label="Copy details for {{ job.title }}">Copy details</button>
+            <a class="portal-outline-button" href="{{ url_for('jobs', q=job.title) }}">View job <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="portal-empty"><h3>New opportunities are on the way</h3><p>Check back soon, or create your profile to be ready when a role opens.</p><a href="{{ url_for('register') }}" class="portal-outline-button">Create your profile</a></div>
+  {% endif %}
+</section>
+
+<section class="portal-bottom-cta">
+  <div><span class="portal-kicker">YOUR WORK DESERVES TO BE SEEN</span><h2>Turn your skills into your next opportunity.</h2></div>
+  <a class="portal-button" href="{{ url_for('register') }}">Build your profile <span aria-hidden="true">→</span></a>
+</section>
+{% endblock %}
