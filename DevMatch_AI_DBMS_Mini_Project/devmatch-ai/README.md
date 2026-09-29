@@ -55,6 +55,8 @@ SELECT id FROM jobs WHERE id = @practice_job_id;
 
 The final `SELECT` returns an empty set. Use the same MySQL session throughout because `@practice_job_id` is session-scoped.
 
+Open `/dbms-demo` in the website to display the current MySQL `jobs` rows as a table. It shows the total count and at least five seeded jobs. Refresh that page after each SQL `INSERT`, `UPDATE`, or `DELETE` to see the row appear, change, or disappear. You can search for `CRUD Practice Job` to isolate your test record, then clear the search to see all rows again. The page uses a fresh database query and disables browser caching.
+
 To classify older applications still marked `Applied` with the new rule, run `flask --app app classify-pending` once. This leaves recruiter decisions in other statuses unchanged. New applications are classified when submitted.
 
 Open http://127.0.0.1:5000 on a desktop or laptop. For the required two-way demonstration, add or edit a job in the website and confirm it with `SELECT * FROM jobs;` in Workbench. Then update that job in Workbench with `UPDATE jobs SET title = 'Updated title' WHERE id = 1;` (choose an existing ID), refresh the jobs page, and confirm the new title. Use a dedicated demo database for these changes.

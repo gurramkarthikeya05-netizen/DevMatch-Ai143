@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 	<link rel="stylesheet" href="{{ url_for('static', filename='career.css') }}">
 	<link rel="stylesheet" href="{{ url_for('static', filename='career_ai.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='dbms_demo.css') }}">
 </head>
 <body>
 	<header class="topbar">
@@ -15,6 +16,7 @@
 			<a class="brand" href="{{ url_for('index') }}"><span class="brand-mark">D</span><span>DevMatch</span><em>AI</em></a>
 			<nav aria-label="Main navigation">
 				<a class="nav-link" href="{{ url_for('jobs') }}">Find jobs</a>
+				<a class="nav-link" href="{{ url_for('dbms_demo') }}">DBMS demo</a>
 				{% if me %}
 					<a class="nav-link" href="{{ url_for('dashboard') }}">Dashboard</a>
 					{% if me.role=='developer' %}<a class="nav-link" href="{{ url_for('career_ai') }}">Gemini advisor</a>{% endif %}

@@ -440,6 +440,16 @@ def jobs():
     rows=query.order_by(Job.created_at.desc()).all()
     applied={a.job_id for a in current_user().developer.applications} if current_user() and current_user().role=='developer' else set()
     return render_template('jobs.html',jobs=rows,applied=applied,match=match,q=q,location=location)
+@app.get('/dbms-demo')
+def dbms_demo():
+    search=request.args.get('q','').strip()[:150]
+    query=Job.query
+    if search:
+        query=query.filter(Job.title.ilike('%'+search+'%'))
+    rows=query.order_by(Job.id.asc()).all()
+    response=app.make_response(render_template('dbms_demo.html',jobs=rows,search=search,total_jobs=Job.query.count()))
+    response.headers['Cache-Control']='no-store'
+    return response
 @app.post('/jobs')
 @login_required('recruiter')
 def create_job():
