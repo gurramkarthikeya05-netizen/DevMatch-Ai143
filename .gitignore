@@ -6,3 +6,6 @@ mysql-8.4.11-winx64/
 # Packaged delivery files
 DevMatch_AI_MySQL_Supabase_Project.zip
 DevMatch_AI_MySQL_Supabase_Project/
+
+# PDF build previews and source scratch files
+tmp/pdfs/
