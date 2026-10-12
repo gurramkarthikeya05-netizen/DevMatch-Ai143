@@ -10,11 +10,12 @@
   {% if not gemini_enabled %}
     <p class="flash error">Gemini is not configured yet. The site owner needs to add <code>GEMINI_API_KEY</code> to the server's <code>.env</code> file and restart the app.</p>
   {% endif %}
-  <form method="post" action="{{ url_for('career_ai') }}" class="stack-form">
+  <form method="post" action="{{ url_for('career_ai') }}" class="stack-form" id="career-advisor-form">
     <input type="hidden" name="csrf" value="{{ csrf }}">
     <label for="career-question">Your career question</label>
     <textarea id="career-question" name="question" rows="4" maxlength="500" required placeholder="Which skills should I improve for backend roles?">{{ question }}</textarea>
     <button class="button small" type="submit" {% if not gemini_enabled %}disabled{% endif %}>Ask Gemini</button>
+    <p id="advisor-progress" class="small-muted" role="status" hidden>Waiting for Gemini. This may take up to 90 seconds if a retry is needed.</p>
   </form>
   {% if error %}<p class="flash error" role="alert">{{ error }}</p>{% endif %}
   {% if answer %}
@@ -25,4 +26,21 @@
     </div>
   {% endif %}
 </section>
+<script>
+  document.getElementById('career-advisor-form').addEventListener('submit', function () {
+    const button = this.querySelector('button[type="submit"]');
+    button.disabled = true;
+    button.textContent = 'Asking Gemini…';
+    document.getElementById('advisor-progress').hidden = false;
+    this.setAttribute('aria-busy', 'true');
+  });
+  window.addEventListener('pageshow', function () {
+    const form = document.getElementById('career-advisor-form');
+    const button = form.querySelector('button[type="submit"]');
+    button.disabled = {{ 'false' if gemini_enabled else 'true' }};
+    button.textContent = 'Ask Gemini';
+    document.getElementById('advisor-progress').hidden = true;
+    form.removeAttribute('aria-busy');
+  });
+</script>
 {% endblock %}

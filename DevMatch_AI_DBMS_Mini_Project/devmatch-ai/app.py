@@ -383,8 +383,18 @@ def update_password():
 @login_required('developer')
 def add_skill():
     name=request.form.get('name','').strip()[:80]
-    if name and not Skill.query.filter(func.lower(Skill.name)==name.lower(),Skill.developer_id==current_user().developer.id).first():
-        db.session.add(Skill(developer_id=current_user().developer.id,name=name,level=request.form.get('level','Intermediate'),years=max(0,min(50,float(request.form.get('years') or 0)))));db.session.commit()
+    level=request.form.get('level','Intermediate')
+    try:
+        years=float(request.form.get('years') or 0)
+    except ValueError:
+        years=-1
+    if not name or level not in ('Beginner','Intermediate','Advanced') or not 0 <= years <= 50:
+        flash('Enter a skill, a valid proficiency, and years between 0 and 50.','error')
+    elif Skill.query.filter(func.lower(Skill.name)==name.lower(),Skill.developer_id==current_user().developer.id).first():
+        flash('You already have that skill on your profile.','error')
+    else:
+        db.session.add(Skill(developer_id=current_user().developer.id,name=name,level=level,years=years));db.session.commit()
+        flash('Skill added.','success')
     return redirect(url_for('dashboard')+'#skills')
 @app.get('/skills/<int:id>/details')
 @login_required('developer')
@@ -456,7 +466,11 @@ def create_job():
     title=request.form.get('title','').strip();description=request.form.get('description','').strip();required=parse_list_values(request.form.get('required_skills',''))
     if not title or not description or not required: flash('Title, description, and required skills are required.','error');return redirect(url_for('dashboard')+'#jobs')
     deadline=request.form.get('deadline')
-    job=Job(recruiter_id=current_user().recruiter.id,title=title[:150],description=description,location=request.form.get('location','Remote').strip(),salary=request.form.get('salary','Not disclosed').strip(),experience_required=request.form.get('experience_required','Entry level').strip(),job_type=request.form.get('job_type','Full-time'),deadline=datetime.strptime(deadline,'%Y-%m-%d').date() if deadline else None)
+    try:
+        deadline_date=datetime.strptime(deadline,'%Y-%m-%d').date() if deadline else None
+    except ValueError:
+        flash('Enter a valid application deadline.','error');return redirect(url_for('dashboard')+'#post-job')
+    job=Job(recruiter_id=current_user().recruiter.id,title=title[:150],description=description,location=request.form.get('location','Remote').strip(),salary=request.form.get('salary','Not disclosed').strip(),experience_required=request.form.get('experience_required','Entry level').strip(),job_type=request.form.get('job_type','Full-time'),deadline=deadline_date)
     job.skills=[JobSkill(name=skill) for skill in required]
     db.session.add(job)
     db.session.commit();flash('Job published.','success');return redirect(url_for('dashboard')+'#jobs')
@@ -465,14 +479,22 @@ def create_job():
 def edit_job(id):
     job=Job.query.filter_by(id=id,recruiter_id=current_user().recruiter.id).first_or_404()
     if request.method=='POST':
+        title=request.form.get('title','').strip()
+        description=request.form.get('description','').strip()
+        required=parse_list_values(request.form.get('required_skills',''))
+        if not title or not description or not required:
+            flash('Title, description, and at least one required skill are needed.','error')
+            return redirect(url_for('edit_job',id=job.id))
+        deadline=request.form.get('deadline')
+        try:
+            deadline_date=datetime.strptime(deadline,'%Y-%m-%d').date() if deadline else None
+        except ValueError:
+            flash('Enter a valid application deadline.','error')
+            return redirect(url_for('edit_job',id=job.id))
         for field in ('title','description','location','salary','experience_required','job_type'):
             setattr(job,field,request.form.get(field,'').strip())
-        required=parse_list_values(request.form.get('required_skills',''))
-        if not required:
-            flash('At least one required skill is needed.','error')
-            return redirect(url_for('edit_job',id=job.id))
         job.skills=[JobSkill(name=skill) for skill in required]
-        deadline=request.form.get('deadline');job.deadline=datetime.strptime(deadline,'%Y-%m-%d').date() if deadline else None
+        job.deadline=deadline_date
         db.session.commit();flash('Job updated.','success');return redirect(url_for('dashboard')+'#jobs')
     return render_template('edit_job.html',job=job)
 @app.post('/jobs/<int:id>/delete')
@@ -570,24 +592,50 @@ def view_resume(id):
     return send_from_directory(app.config['UPLOAD_FOLDER'],developer.resume_path,as_attachment=True)
 def gemini_text(prompt, schema=None):
     import requests
+    import random
+    import time
     key=os.getenv('GEMINI_API_KEY','').strip()
     if not key:
         raise RuntimeError('Gemini API key is not configured')
     config={'maxOutputTokens':1200}
     if schema:
         config.update(responseMimeType='application/json',responseSchema=schema)
-    response=requests.post(
-        f'https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent',
-        headers={'x-goog-api-key':key,'Content-Type':'application/json'},
-        json={'contents':[{'role':'user','parts':[{'text':prompt}]}],'generationConfig':config},
-        timeout=35,
-    )
-    response.raise_for_status()
+    for attempt in range(2):
+        try:
+            response=requests.post(
+                f'https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent',
+                headers={'x-goog-api-key':key,'Content-Type':'application/json'},
+                json={'contents':[{'role':'user','parts':[{'text':prompt}]}],'generationConfig':config},
+                timeout=(5,35),
+            )
+            if attempt == 0 and response.status_code in (408,500,502,503,504):
+                response.close()
+                time.sleep(1 + random.uniform(0,0.5))
+                continue
+            response.raise_for_status()
+            break
+        except (requests.Timeout,requests.ConnectionError):
+            if attempt == 1:
+                raise
+            time.sleep(1 + random.uniform(0,0.5))
     parts=response.json()['candidates'][0]['content']['parts']
     result='\n'.join(part['text'] for part in parts if 'text' in part).strip()
     if not result:
         raise ValueError('Gemini returned no text')
     return result
+
+def gemini_error_message(error):
+    import requests
+    status=getattr(getattr(error,'response',None),'status_code',None)
+    if status == 429:
+        return 'Gemini has reached its request or usage limit. Wait before trying again; the site owner can check the API quota.'
+    if status in (400,401,403,404):
+        return 'Gemini could not accept this request. The site owner needs to check the API key, access, and model configuration.'
+    if status in (500,502,503,504):
+        return 'Gemini is temporarily unavailable. We retried once but could not get an answer. Please try again in a few minutes.'
+    if isinstance(error,(requests.Timeout,requests.ConnectionError)) or status == 408:
+        return 'Gemini did not respond in time. We retried once. Check your connection and try again in a few minutes.'
+    return 'Gemini returned no usable answer. Please rephrase your question and try again.'
 
 def analyze_resume(text):
     if os.getenv('GEMINI_API_KEY','').strip():
@@ -650,7 +698,7 @@ def career_ai():
                 answer=gemini_text(prompt)[:4000]
             except (requests.RequestException,KeyError,ValueError,IndexError,TypeError) as exc:
                 app.logger.warning('Gemini career advice failed: %s',exc)
-                error='Gemini could not answer right now. Please try again later.'
+                error=gemini_error_message(exc)
     return render_template('career_ai.html',gemini_enabled=enabled,question=question,answer=answer,error=error)
 @app.errorhandler(413)
 def too_large(e): flash('PDF must be 5 MB or smaller.','error');return redirect(url_for('dashboard')+'#resume')

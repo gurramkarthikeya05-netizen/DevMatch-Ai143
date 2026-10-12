@@ -61,8 +61,10 @@ In a first Windows Command Prompt, run the website and keep the window open:
 
 ```bat
 cd /d D:\DBMS_DevApp\DevMatch_AI_DBMS_Mini_Project\devmatch-ai
-.venv\Scripts\python.exe -m flask --app app run --debug
+start_local.cmd
 ```
+
+For this workspace's portable MySQL setup, `start_local.cmd` starts the existing database on `127.0.0.1:3307` when needed, checks the saved `.env` connection, and then runs Flask. You can also double-click this file. MySQL stays running after you stop Flask. If startup fails, check `D:\DBMS_DevApp\mysql-local\startup.log`. Running Flask directly requires MySQL to be started separately; otherwise pages fail with MySQL error 2003 / WinError 10061.
 
 In a second Command Prompt, open the same database. The options show the queries and format the results as tables:
 

@@ -65,7 +65,7 @@
           </div>
           <div class="portal-job-actions">
             <button type="button" class="copy-button" data-copy="{{ job.title }} | {{ job.recruiter.company_name }} | {{ job.location }} | {{ job.salary }} | Skills: {{ job.required_skills }}" data-copy-label="Copy details" aria-label="Copy details for {{ job.title }}">Copy details</button>
-            <a class="portal-outline-button" href="{{ url_for('jobs', q=job.title) }}">View job <span aria-hidden="true">→</span></a>
+            <a class="portal-outline-button" href="{{ url_for('jobs', q=job.title) }}#job-{{ job.id }}">View job <span aria-hidden="true">→</span></a>
           </div>
         </article>
       {% endfor %}

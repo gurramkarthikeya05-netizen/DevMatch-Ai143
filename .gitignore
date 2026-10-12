@@ -9,3 +9,4 @@ DevMatch_AI_MySQL_Supabase_Project/
 
 # PDF build previews and source scratch files
 tmp/pdfs/
+tmp/*.log
