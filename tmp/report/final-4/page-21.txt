@@ -1,0 +1,34 @@
+DevMatch AI 
+Dept. of ECE, CMRIT 2026–2027Page 13
+4.3 Back End Code continued
+The job module allows recruiters to create, edit and remove their own postings. Required 
+skill values are stored as job_skills child records. The application module checks whether 
+the job exists, whether its deadline has passed and whether the developer already applied. 
+A successful submission creates an application and commits it to MySQL.
+Skill matching and initial status
+Let R be the set of case normalized job skill names and C the union of profile skill names 
+and the latest extracted resume skills. The displayed score is round(100 × |R ∩ C| / |R|), or 
+zero when R is empty. The shortlist decision uses the unrounded fraction and a strict 
+threshold above 70 percent.
+SHORTLIST_MATCH_THRESHOLD = 70
+def should_shortlist(matched_count, required_count):
+ return (required_count > 0 and
+ 100 * matched_count >
+ SHORTLIST_MATCH_THRESHOLD * required_count)
+# Within the application submission route
+developer = current_user().developer
+result = ats_match(developer, job)
+status_value = ('Shortlisted' if
+ result['recommend_shortlist'] else 'Rejected')
+db.session.add(Application(job_id=id,
+ developer_id=developer.id, status=status_value))
+db.session.commit()
+A candidate matching three of three skills scores 100 percent and meets the threshold; 
+two of three scores 67 percent and does not. Exactly seven of ten skills produces 70 
+percent and is rejected initially. A job with no recorded skills also does not meet the 
+threshold. The recruiter can change the status to Applied, Under Review, Shortlisted, 
+Rejected or Selected after review.
+The function exposes matched, missing, profile matched and resume matched skill lists. 
+These lists explain the score. Matching is based on recorded names, not semantic 
+equivalence, and does not use proficiency levels, years, minimum experience or protected 
+personal characteristics.

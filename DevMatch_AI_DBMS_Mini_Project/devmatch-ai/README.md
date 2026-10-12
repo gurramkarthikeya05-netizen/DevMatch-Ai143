@@ -55,6 +55,52 @@ SELECT id FROM jobs WHERE id = @practice_job_id;
 
 The final `SELECT` returns an empty set. Use the same MySQL session throughout because `@practice_job_id` is session-scoped.
 
+### Command Prompt presentation: all records and website CRUD
+
+In a first Windows Command Prompt, run the website and keep the window open:
+
+```bat
+cd /d D:\DBMS_DevApp\DevMatch_AI_DBMS_Mini_Project\devmatch-ai
+.venv\Scripts\python.exe -m flask --app app run --debug
+```
+
+In a second Command Prompt, open the same database. The options show the queries and format the results as tables:
+
+```bat
+cd /d D:\DBMS_DevApp\DevMatch_AI_DBMS_Mini_Project\devmatch-ai
+.venv\Scripts\python.exe mysql_shell.py --table --verbose
+```
+
+At `mysql>`, run `source mysql_show_data.sql;`. This read-only script displays the database name, table structures, all records from the ten application tables (omitting user password hashes), exact row counts, joins, searches, grouped summaries, foreign keys, triggers and any installed audit table/summary view. For a wide table, run `SELECT * FROM jobs\G` to display one record vertically. To record your presentation, enter `tee website_queries.txt;` before sourcing the file and `notee;` afterward.
+
+For persistent CRUD visible in the website, run each stage separately in the same MySQL session and refresh `http://127.0.0.1:5000/jobs` or `/dbms-demo` between stages:
+
+```sql
+SET autocommit = 1;
+SET @demo_recruiter_id = (SELECT MIN(id) FROM recruiter_profiles);
+
+-- CREATE: use an existing recruiter and fill the website's display fields.
+INSERT INTO jobs (recruiter_id, title, description, location, salary,
+                  experience_required, job_type, created_at)
+VALUES (@demo_recruiter_id, 'SQL Demo Job', 'Created from Command Prompt',
+        'Bengaluru', 'Not disclosed', 'Entry level', 'Full-time', NOW());
+SET @demo_job_id = LAST_INSERT_ID();
+
+-- READ: refresh the website to see the new job.
+SELECT * FROM jobs WHERE id = @demo_job_id;
+
+-- UPDATE: refresh the website to see the changed title and location.
+UPDATE jobs SET title = 'Updated SQL Demo Job', location = 'Hyderabad'
+WHERE id = @demo_job_id;
+SELECT * FROM jobs WHERE id = @demo_job_id;
+
+-- DELETE: remove only this demonstration job, then refresh the website.
+DELETE FROM jobs WHERE id = @demo_job_id;
+SELECT * FROM jobs WHERE id = @demo_job_id;
+```
+
+The recruiter lookup requires at least one recruiter profile. Leave the demo job without applications or skill rows for this simple deletion example. The homepage previews only the three newest jobs; `/jobs` displays all matching jobs. SQL display queries read data without changing it. INSERT, UPDATE and DELETE appear after a page refresh; the page does not update automatically while left open.
+
 Open `/dbms-demo` in the website to display the current MySQL `jobs` rows as a table. It shows the total count and at least five seeded jobs. Refresh that page after each SQL `INSERT`, `UPDATE`, or `DELETE` to see the row appear, change, or disappear. You can search for `CRUD Practice Job` to isolate your test record, then clear the search to see all rows again. The page uses a fresh database query and disables browser caching.
 
 To classify older applications still marked `Applied` with the new rule, run `flask --app app classify-pending` once. This leaves recruiter decisions in other statuses unchanged. New applications are classified when submitted.

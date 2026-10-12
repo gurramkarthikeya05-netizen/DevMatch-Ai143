@@ -1,0 +1,481 @@
+[
+  {
+    "class": "User",
+    "columns": [
+      {
+        "name": "id",
+        "type": "INT",
+        "key": [
+          "PK"
+        ]
+      },
+      {
+        "name": "name",
+        "type": "VARCHAR(120)",
+        "key": []
+      },
+      {
+        "name": "email",
+        "type": "VARCHAR(190)",
+        "key": [
+          "UK"
+        ]
+      },
+      {
+        "name": "password_hash",
+        "type": "VARCHAR(255)",
+        "key": []
+      },
+      {
+        "name": "role",
+        "type": "VARCHAR(20)",
+        "key": []
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME",
+        "key": []
+      }
+    ],
+    "unique": [],
+    "name": "users"
+  },
+  {
+    "class": "Developer",
+    "columns": [
+      {
+        "name": "id",
+        "type": "INT",
+        "key": [
+          "PK"
+        ]
+      },
+      {
+        "name": "user_id",
+        "type": "INT",
+        "key": [
+          "UK",
+          "FK"
+        ],
+        "references": "users.id"
+      },
+      {
+        "name": "bio",
+        "type": "TEXT",
+        "key": []
+      },
+      {
+        "name": "phone",
+        "type": "VARCHAR(30)",
+        "key": []
+      },
+      {
+        "name": "location",
+        "type": "VARCHAR(100)",
+        "key": []
+      },
+      {
+        "name": "education",
+        "type": "VARCHAR(160)",
+        "key": []
+      },
+      {
+        "name": "experience",
+        "type": "VARCHAR(160)",
+        "key": []
+      },
+      {
+        "name": "github_url",
+        "type": "VARCHAR(250)",
+        "key": []
+      },
+      {
+        "name": "linkedin_url",
+        "type": "VARCHAR(250)",
+        "key": []
+      },
+      {
+        "name": "resume_path",
+        "type": "VARCHAR(255)",
+        "key": []
+      }
+    ],
+    "unique": [],
+    "name": "developer_profiles"
+  },
+  {
+    "class": "Recruiter",
+    "columns": [
+      {
+        "name": "id",
+        "type": "INT",
+        "key": [
+          "PK"
+        ]
+      },
+      {
+        "name": "user_id",
+        "type": "INT",
+        "key": [
+          "UK",
+          "FK"
+        ],
+        "references": "users.id"
+      },
+      {
+        "name": "company_name",
+        "type": "VARCHAR(140)",
+        "key": []
+      },
+      {
+        "name": "company_description",
+        "type": "TEXT",
+        "key": []
+      },
+      {
+        "name": "location",
+        "type": "VARCHAR(100)",
+        "key": []
+      },
+      {
+        "name": "website",
+        "type": "VARCHAR(250)",
+        "key": []
+      }
+    ],
+    "unique": [],
+    "name": "recruiter_profiles"
+  },
+  {
+    "class": "Skill",
+    "columns": [
+      {
+        "name": "id",
+        "type": "INT",
+        "key": [
+          "PK"
+        ]
+      },
+      {
+        "name": "developer_id",
+        "type": "INT",
+        "key": [
+          "FK"
+        ],
+        "references": "developer_profiles.id"
+      },
+      {
+        "name": "name",
+        "type": "VARCHAR(80)",
+        "key": []
+      },
+      {
+        "name": "level",
+        "type": "VARCHAR(30)",
+        "key": []
+      },
+      {
+        "name": "years",
+        "type": "FLOAT",
+        "key": []
+      }
+    ],
+    "unique": [
+      [
+        "developer_id",
+        "name"
+      ]
+    ],
+    "name": "skills"
+  },
+  {
+    "class": "Project",
+    "columns": [
+      {
+        "name": "id",
+        "type": "INT",
+        "key": [
+          "PK"
+        ]
+      },
+      {
+        "name": "developer_id",
+        "type": "INT",
+        "key": [
+          "FK"
+        ],
+        "references": "developer_profiles.id"
+      },
+      {
+        "name": "name",
+        "type": "VARCHAR(140)",
+        "key": []
+      },
+      {
+        "name": "description",
+        "type": "TEXT",
+        "key": []
+      },
+      {
+        "name": "github_link",
+        "type": "VARCHAR(250)",
+        "key": []
+      },
+      {
+        "name": "project_link",
+        "type": "VARCHAR(250)",
+        "key": []
+      }
+    ],
+    "unique": [],
+    "name": "projects"
+  },
+  {
+    "class": "ProjectTechnology",
+    "columns": [
+      {
+        "name": "id",
+        "type": "INT",
+        "key": [
+          "PK"
+        ]
+      },
+      {
+        "name": "project_id",
+        "type": "INT",
+        "key": [
+          "FK"
+        ],
+        "references": "projects.id"
+      },
+      {
+        "name": "name",
+        "type": "VARCHAR(80)",
+        "key": []
+      },
+      {
+        "name": "category",
+        "type": "VARCHAR(40)",
+        "key": []
+      },
+      {
+        "name": "version",
+        "type": "VARCHAR(40)",
+        "key": []
+      },
+      {
+        "name": "added_at",
+        "type": "DATETIME",
+        "key": []
+      }
+    ],
+    "unique": [
+      [
+        "project_id",
+        "name"
+      ]
+    ],
+    "name": "project_technologies"
+  },
+  {
+    "class": "Job",
+    "columns": [
+      {
+        "name": "id",
+        "type": "INT",
+        "key": [
+          "PK"
+        ]
+      },
+      {
+        "name": "recruiter_id",
+        "type": "INT",
+        "key": [
+          "FK"
+        ],
+        "references": "recruiter_profiles.id"
+      },
+      {
+        "name": "title",
+        "type": "VARCHAR(150)",
+        "key": []
+      },
+      {
+        "name": "description",
+        "type": "TEXT",
+        "key": []
+      },
+      {
+        "name": "location",
+        "type": "VARCHAR(100)",
+        "key": []
+      },
+      {
+        "name": "salary",
+        "type": "VARCHAR(100)",
+        "key": []
+      },
+      {
+        "name": "experience_required",
+        "type": "VARCHAR(100)",
+        "key": []
+      },
+      {
+        "name": "job_type",
+        "type": "VARCHAR(40)",
+        "key": []
+      },
+      {
+        "name": "deadline",
+        "type": "DATE",
+        "key": []
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME",
+        "key": []
+      }
+    ],
+    "unique": [],
+    "name": "jobs"
+  },
+  {
+    "class": "JobSkill",
+    "columns": [
+      {
+        "name": "id",
+        "type": "INT",
+        "key": [
+          "PK"
+        ]
+      },
+      {
+        "name": "job_id",
+        "type": "INT",
+        "key": [
+          "FK"
+        ],
+        "references": "jobs.id"
+      },
+      {
+        "name": "name",
+        "type": "VARCHAR(80)",
+        "key": []
+      },
+      {
+        "name": "importance",
+        "type": "VARCHAR(20)",
+        "key": []
+      },
+      {
+        "name": "minimum_years",
+        "type": "FLOAT",
+        "key": []
+      },
+      {
+        "name": "added_at",
+        "type": "DATETIME",
+        "key": []
+      }
+    ],
+    "unique": [
+      [
+        "job_id",
+        "name"
+      ]
+    ],
+    "name": "job_skills"
+  },
+  {
+    "class": "Application",
+    "columns": [
+      {
+        "name": "id",
+        "type": "INT",
+        "key": [
+          "PK"
+        ]
+      },
+      {
+        "name": "developer_id",
+        "type": "INT",
+        "key": [
+          "FK"
+        ],
+        "references": "developer_profiles.id"
+      },
+      {
+        "name": "job_id",
+        "type": "INT",
+        "key": [
+          "FK"
+        ],
+        "references": "jobs.id"
+      },
+      {
+        "name": "status",
+        "type": "VARCHAR(30)",
+        "key": []
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME",
+        "key": []
+      }
+    ],
+    "unique": [
+      [
+        "developer_id",
+        "job_id"
+      ]
+    ],
+    "name": "applications"
+  },
+  {
+    "class": "ResumeAnalysis",
+    "columns": [
+      {
+        "name": "id",
+        "type": "INT",
+        "key": [
+          "PK"
+        ]
+      },
+      {
+        "name": "developer_id",
+        "type": "INT",
+        "key": [
+          "FK"
+        ],
+        "references": "developer_profiles.id"
+      },
+      {
+        "name": "summary",
+        "type": "TEXT",
+        "key": []
+      },
+      {
+        "name": "strengths",
+        "type": "TEXT",
+        "key": []
+      },
+      {
+        "name": "missing_skills",
+        "type": "TEXT",
+        "key": []
+      },
+      {
+        "name": "extracted_skills",
+        "type": "TEXT",
+        "key": []
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME",
+        "key": []
+      }
+    ],
+    "unique": [],
+    "name": "resume_analysis"
+  }
+]

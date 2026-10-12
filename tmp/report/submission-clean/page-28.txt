@@ -1,0 +1,10 @@
+DevMatch AI – Developer Portfolio & Hiring Platform
+Dept. of ECE, CMRIT 2026-2027 Page 20
+REFERENCES
+[1] Oracle, MySQL 8.4 Reference Manual. https://dev.mysql.com/doc/refman/8.4/en/.
+[2] Pallets, Flask Documentation. https://flask.palletsprojects.com/en/stable/.
+[3] SQLAlchemy authors, SQLAlchemy 2.0 ORM Documentation. 
+https://docs.sqlalchemy.org/en/20/orm/.
+[4] Artifex, PyMuPDF Documentation. https://pymupdf.readthedocs.io/en/latest/.
+[5] Google, Gemini API Documentation. https://ai.google.dev/gemini-api/docs.
+[6] Supabase, Storage Documentation. https://supabase.com/docs/guides/storage.

@@ -1,0 +1,10 @@
+iv
+ABSTRACT
+DevMatch AI is a database driven developer portfolio and hiring platform. Developers manage 
+profiles, skills, projects, resumes and applications, while recruiters publish jobs and review 
+candidates. Flask and SQLAlchemy connect a responsive web interface to ten related MySQL 
+tables. Normalized skill and technology records, integrity constraints, joins, views and a status 
+audit trigger demonstrate DBMS concepts. PDF resume extraction supports transparent skill 
+matching, with optional Gemini analysis. The system centralizes hiring information and allows 
+recruiter review of automatically assigned application statuses.
+Keywords: MySQL, Flask, Database Normalization, Developer Portfolio, Skill Matching

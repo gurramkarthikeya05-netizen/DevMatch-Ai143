@@ -1,0 +1,32 @@
+DevMatch AI – Developer Portfolio & Hiring Platform
+Dept. of ECE, CMRIT 2026-2027 Page 6
+3.3 Database Tables
+Tables 3.1–3.4 describe the actual SQLAlchemy model columns. VARCHAR lengths are shown 
+as String lengths in the model. Integer identifiers are surrogate primary keys. The profile user_id 
+columns are unique foreign keys, so a user cannot have duplicate records in the same profile table.
+Table 3.1 Account and profile tables
+Table Attribute Type Key or role
+users id Integer PK
+users name String(120) Attribute
+users email String(190) UNIQUE
+users password_hash String(255) Attribute
+users role String(20) Attribute
+users created_at DateTime Attribute
+developer_profiles id Integer PK
+developer_profiles user_id Integer FK users.id, UNIQUE
+developer_profiles bio Text Attribute
+developer_profiles phone String(30) Attribute
+developer_profiles location String(100) Attribute
+developer_profiles education String(160) Attribute
+developer_profiles experience String(160) Attribute
+developer_profiles github_url String(250) Attribute
+developer_profiles linkedin_url String(250) Attribute
+developer_profiles resume_path String(255) Attribute
+recruiter_profiles id Integer PK
+recruiter_profiles user_id Integer FK users.id, UNIQUE
+recruiter_profiles company_name String(140) Attribute
+recruiter_profiles company_description Text Attribute
+recruiter_profiles location String(100) Attribute
+recruiter_profiles website String(250) Attribute
+Email is unique and the stored credential is a password hash. Phone and web links remain strings. 
+User credentials are stored once and are referenced by the role specific profile.

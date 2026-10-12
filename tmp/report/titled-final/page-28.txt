@@ -1,0 +1,18 @@
+DevMatch AI – Developer Portfolio & Hiring Platform 
+Dept. of ECE, CMRIT 2026-2027 Page 20
+REFERENCES
+The following technical references describe the database, framework and optional 
+integrations used in this project. The project’s own source and documentation identify its 
+specific behavior and schema.
+[1] Oracle, MySQL 8.4 Reference Manual. [Online]. Available: 
+https://dev.mysql.com/doc/refman/8.4/en/. Accessed: 3 October 2026.
+[2] Pallets, Flask Documentation. [Online]. Available: 
+https://flask.palletsprojects.com/en/stable/. Accessed: 3 October 2026.
+[3] SQLAlchemy authors, SQLAlchemy 2.0 ORM Documentation. [Online]. Available: 
+https://docs.sqlalchemy.org/en/20/orm/. Accessed: 3 October 2026.
+[4] Artifex, PyMuPDF Documentation. [Online]. Available: 
+https://pymupdf.readthedocs.io/en/latest/. Accessed: 3 October 2026.
+[5] Google, Gemini API Documentation. [Online]. Available: 
+https://ai.google.dev/gemini-api/docs. Accessed: 3 October 2026.
+[6] Supabase, Storage Documentation. [Online]. Available: 
+https://supabase.com/docs/guides/storage. Accessed: 3 October 2026.

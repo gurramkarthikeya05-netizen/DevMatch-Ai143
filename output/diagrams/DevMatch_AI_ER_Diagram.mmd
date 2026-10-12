@@ -1,0 +1,107 @@
+erDiagram
+    USERS ||--o| DEVELOPER_PROFILES : owns
+    USERS ||--o| RECRUITER_PROFILES : owns
+    DEVELOPER_PROFILES ||--o{ SKILLS : has
+    DEVELOPER_PROFILES ||--o{ PROJECTS : showcases
+    PROJECTS ||--o{ PROJECT_TECHNOLOGIES : uses
+    DEVELOPER_PROFILES ||--o{ APPLICATIONS : submits
+    DEVELOPER_PROFILES ||--o{ RESUME_ANALYSIS : receives
+    RECRUITER_PROFILES ||--o{ JOBS : posts
+    JOBS ||--o{ JOB_SKILLS : requires
+    JOBS ||--o{ APPLICATIONS : receives
+    APPLICATIONS ||--o{ APPLICATION_STATUS_HISTORY : audits
+
+    USERS {
+        int id PK
+        string name
+        string email UK
+        string password_hash
+        string role
+        datetime created_at
+    }
+    DEVELOPER_PROFILES {
+        int id PK
+        int user_id FK, UK
+        text bio
+        string phone
+        string location
+        string education
+        string experience
+        string github_url
+        string linkedin_url
+        string resume_path
+    }
+    RECRUITER_PROFILES {
+        int id PK
+        int user_id FK, UK
+        string company_name
+        text company_description
+        string location
+        string website
+    }
+    SKILLS {
+        int id PK
+        int developer_id FK
+        string name
+        string level
+        float years
+    }
+    PROJECTS {
+        int id PK
+        int developer_id FK
+        string name
+        text description
+        string github_link
+        string project_link
+    }
+    PROJECT_TECHNOLOGIES {
+        int id PK
+        int project_id FK
+        string name
+        string category
+        string version
+        datetime added_at
+    }
+    JOBS {
+        int id PK
+        int recruiter_id FK
+        string title
+        text description
+        string location
+        string salary
+        string experience_required
+        string job_type
+        date deadline
+        datetime created_at
+    }
+    JOB_SKILLS {
+        int id PK
+        int job_id FK
+        string name
+        string importance
+        float minimum_years
+        datetime added_at
+    }
+    APPLICATIONS {
+        int id PK
+        int developer_id FK
+        int job_id FK
+        string status
+        datetime created_at
+    }
+    RESUME_ANALYSIS {
+        int id PK
+        int developer_id FK
+        text summary
+        text strengths
+        text missing_skills
+        text extracted_skills
+        datetime created_at
+    }
+    APPLICATION_STATUS_HISTORY {
+        int id PK
+        int application_id FK
+        string old_status
+        string new_status
+        datetime changed_at
+    }

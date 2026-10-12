@@ -1,0 +1,29 @@
+DevMatch AITitle 
+Dept. of ECE, CMRIT 2026–2027Page 3
+Chapter 2
+SYSTEM REQUIREMENTS
+The system requires a browser, a Python application environment and a reachable 
+MySQL database. Optional services extend resume analysis and deployment; the core 
+profile, job and application functions use the same relational backend in both local and 
+hosted configurations.
+2.1 Front End Tools
+HTML defines pages and forms; CSS provides responsive layouts, navigation, 
+dashboards and job cards. Jinja templates bind server supplied records to the interface. 
+JavaScript supports interactions such as copying job information and opening skill details. 
+Form actions and database updates are processed by Flask rather than by browser access 
+to MySQL.
+2.2 Back End Tools
+Python and Flask implement routes, sessions and role checks. Flask SQLAlchemy defines 
+models and database transactions; PyMySQL supplies the MySQL connection. PyMuPDF 
+extracts PDF text, requests supports Gemini API calls, and python dotenv loads local 
+configuration. Flask Limiter throttles selected account actions. MySQL Workbench or the 
+command line client supports SQL demonstrations. References [1]–[6] identify the 
+relevant official documentation.
+Table 2.1 Development requirements
+Component Requirement or role
+Hardware A computer capable of running Python, MySQL and a modern browser; 4 GB 
+RAM and free storage are practical local starting points.
+Software Python 3.10 or later; MySQL 8; a browser; packages listed in requirements.txt.
+Database mysql+pymysql connection URL; dedicated database and account.
+Optional services Gemini API key; private Supabase resume bucket; Redis compatible limiter 
+storage for production.

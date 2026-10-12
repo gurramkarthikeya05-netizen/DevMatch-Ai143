@@ -1,0 +1,6 @@
+DevMatch AI 
+Dept. of ECE, CMRIT 2026–2027Page 17
+Fig 5.2 Developer dashboard
+Fig 5.2 shows the seeded developer’s three skills, one project and one application. The visible 
+Shortlisted status is read from the application record. Skills, projects and analyses have separate 
+tables linked to the developer profile.

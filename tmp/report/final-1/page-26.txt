@@ -1,0 +1,33 @@
+DevMatch AITitle 
+Dept. of ECE, CMRIT 2026–2027Page 18
+4.3 Back End Code continued
+Resume analysis and storage modules
+The resume route accepts a PDF within the configured 5 MB request limit, sanitizes the 
+filename and extracts document text using PyMuPDF. Structured analysis is saved as a 
+ResumeAnalysis row linked to the developer. The matching function uses the latest 
+analysis rather than combining every historical upload.
+# Actual application configuration
+app.config.update(
+ SQLALCHEMY_DATABASE_URI=DATABASE_URL,
+ SQLALCHEMY_TRACK_MODIFICATIONS=False,
+ MAX_CONTENT_LENGTH=5 * 1024 * 1024,
+ SESSION_COOKIE_HTTPONLY=True,
+ SESSION_COOKIE_SAMESITE='Lax',
+ SESSION_COOKIE_SECURE=IS_PRODUCTION,
+)
+When a Gemini API key is configured, extracted resume text is submitted for structured 
+analysis. Without a key or when the analysis request fails, the local extraction path 
+identifies supported skills and returns a deterministic result. The career advisor uses the 
+developer’s profile and current job listings as context. It requires the configured AI 
+service.
+Local development can store PDF files in the upload directory. Production configuration 
+uses a private Supabase bucket, and the authenticated resume route retrieves the file. 
+MySQL stores the application records and resume path; Supabase’s PostgreSQL database 
+is not used by this project.
+Security and operational controls
+The source includes CSRF checks, role and ownership checks, password hashing, login 
+and registration rate limits, secure production cookies and response security headers. 
+Production startup requires secret configuration, allowed hosts, private storage and shared 
+rate limit storage. Secrets are server configuration values and must not appear in 
+templates or screenshots. These controls support the current demonstration; broader 
+upload scanning and operational monitoring remain future work.

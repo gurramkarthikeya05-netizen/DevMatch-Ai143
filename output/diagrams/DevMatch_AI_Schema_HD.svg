@@ -1,0 +1,348 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3800" height="3380" viewBox="0 0 3800 3380"><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#7C8CA3"/></marker><filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#172B4D" flood-opacity="0.12"/></filter></defs><rect width="100%" height="100%" fill="#FAFBFD"/>
+<text x="1900" y="82" font-family="Arial, sans-serif" font-size="78" font-weight="700" fill="#172B4D" text-anchor="middle" dominant-baseline="middle">DevMatch AI</text>
+<text x="1900" y="153" font-family="Arial, sans-serif" font-size="33" font-weight="700" fill="#526782" text-anchor="middle" dominant-baseline="middle">WEBSITE RELATIONAL SCHEMA</text>
+<polyline points="1300,1120 1400,1120 1400,390 1450,390" fill="none" stroke="#7C8CA3" stroke-width="4" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<circle cx="1300" cy="1120" r="6" fill="#7C8CA3"/>
+<rect x="1310" y="729" width="120" height="42" rx="10" fill="#FAFBFD"/>
+<text x="1370" y="750" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#526782" text-anchor="middle" dominant-baseline="middle">1 : 1</text>
+<polyline points="2550,1120 2350,1120 2350,390 2150,390" fill="none" stroke="#7C8CA3" stroke-width="4" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<circle cx="2550" cy="1120" r="6" fill="#7C8CA3"/>
+<rect x="2290" y="729" width="120" height="42" rx="10" fill="#FAFBFD"/>
+<text x="2350" y="750" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#526782" text-anchor="middle" dominant-baseline="middle">1 : 1</text>
+<polyline points="150,2020 65,2020 65,1070 500,1070" fill="none" stroke="#7C8CA3" stroke-width="4" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<circle cx="150" cy="2020" r="6" fill="#7C8CA3"/>
+<rect x="35" y="1699" width="120" height="42" rx="10" fill="#FAFBFD"/>
+<text x="95" y="1720" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#526782" text-anchor="middle" dominant-baseline="middle">1 : N</text>
+<polyline points="1650,2020 1710,2020 1710,1070 1300,1070" fill="none" stroke="#7C8CA3" stroke-width="4" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<circle cx="1650" cy="2020" r="6" fill="#7C8CA3"/>
+<rect x="1650" y="1689" width="120" height="42" rx="10" fill="#FAFBFD"/>
+<text x="1710" y="1710" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#526782" text-anchor="middle" dominant-baseline="middle">1 : N</text>
+<polyline points="1850,2020 1780,2020 1780,1070 1300,1070" fill="none" stroke="#7C8CA3" stroke-width="4" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<circle cx="1850" cy="2020" r="6" fill="#7C8CA3"/>
+<rect x="1740" y="1489" width="120" height="42" rx="10" fill="#FAFBFD"/>
+<text x="1800" y="1510" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#526782" text-anchor="middle" dominant-baseline="middle">1 : N</text>
+<polyline points="1900,2720 1820,2720 1820,1070 1300,1070" fill="none" stroke="#7C8CA3" stroke-width="4" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<circle cx="1900" cy="2720" r="6" fill="#7C8CA3"/>
+<rect x="1760" y="2379" width="120" height="42" rx="10" fill="#FAFBFD"/>
+<text x="1820" y="2400" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#526782" text-anchor="middle" dominant-baseline="middle">1 : N</text>
+<polyline points="2750,1780 2450,1780 2450,1070 2550,1070" fill="none" stroke="#7C8CA3" stroke-width="4" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<circle cx="2750" cy="1780" r="6" fill="#7C8CA3"/>
+<rect x="2390" y="1489" width="120" height="42" rx="10" fill="#FAFBFD"/>
+<text x="2450" y="1510" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#526782" text-anchor="middle" dominant-baseline="middle">1 : N</text>
+<polyline points="1000,2720 930,2720 930,1970 1000,1970" fill="none" stroke="#7C8CA3" stroke-width="4" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<circle cx="1000" cy="2720" r="6" fill="#7C8CA3"/>
+<rect x="870" y="2379" width="120" height="42" rx="10" fill="#FAFBFD"/>
+<text x="930" y="2400" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#526782" text-anchor="middle" dominant-baseline="middle">1 : N</text>
+<polyline points="2600,2770 2670,2770 2670,1730 2750,1730" fill="none" stroke="#7C8CA3" stroke-width="4" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<circle cx="2600" cy="2770" r="6" fill="#7C8CA3"/>
+<rect x="2610" y="2379" width="120" height="42" rx="10" fill="#FAFBFD"/>
+<text x="2670" y="2400" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#526782" text-anchor="middle" dominant-baseline="middle">1 : N</text>
+<polyline points="3550,2720 3690,2720 3690,1730 3450,1730" fill="none" stroke="#7C8CA3" stroke-width="4" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<circle cx="3550" cy="2720" r="6" fill="#7C8CA3"/>
+<rect x="3630" y="2379" width="120" height="42" rx="10" fill="#FAFBFD"/>
+<text x="3690" y="2400" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#526782" text-anchor="middle" dominant-baseline="middle">1 : N</text>
+<rect x="1450" y="220" width="700" height="510" rx="16" fill="white" stroke="#D9E1ED" stroke-width="2" filter="url(#shadow)"/><path d="M1466,220H2134Q2150,220 2150,236V300H1450V236Q1450,220 1466,220" fill="#172B4D"/>
+<text x="1478" y="263" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#FFFFFF" text-anchor="start" dominant-baseline="middle">users</text>
+<text x="1478" y="338" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#526782" text-anchor="start" dominant-baseline="middle">KEY</text>
+<text x="1600" y="338" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#526782" text-anchor="start" dominant-baseline="middle">COLUMN</text>
+<text x="2125" y="338" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#526782" text-anchor="end" dominant-baseline="middle">TYPE</text>
+<line x1="1450" y1="363" x2="2150" y2="363" stroke="#D9E1ED" stroke-width="2"/>
+<rect x="1451" y="365" width="698" height="50" fill="#F5F8FC"/>
+<text x="1478" y="390" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#B27514" text-anchor="start" dominant-baseline="middle">PK</text>
+<text x="1600" y="390" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#172B4D" text-anchor="start" dominant-baseline="middle">id</text>
+<text x="2125" y="390" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">INT</text>
+<text x="1478" y="440" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#172B4D" text-anchor="start" dominant-baseline="middle"></text>
+<text x="1600" y="440" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">name</text>
+<text x="2125" y="440" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">VARCHAR(120)</text>
+<rect x="1451" y="465" width="698" height="50" fill="#F5F8FC"/>
+<text x="1478" y="490" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#172B4D" text-anchor="start" dominant-baseline="middle">UK</text>
+<text x="1600" y="490" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">email</text>
+<text x="2125" y="490" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">VARCHAR(190)</text>
+<text x="1478" y="540" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#172B4D" text-anchor="start" dominant-baseline="middle"></text>
+<text x="1600" y="540" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">password_hash</text>
+<text x="2125" y="540" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">VARCHAR(255)</text>
+<rect x="1451" y="565" width="698" height="50" fill="#F5F8FC"/>
+<text x="1478" y="590" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#172B4D" text-anchor="start" dominant-baseline="middle"></text>
+<text x="1600" y="590" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">role</text>
+<text x="2125" y="590" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">VARCHAR(20)</text>
+<text x="1478" y="640" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#172B4D" text-anchor="start" dominant-baseline="middle"></text>
+<text x="1600" y="640" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">created_at</text>
+<text x="2125" y="640" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">DATETIME</text>
+<rect x="500" y="900" width="800" height="710" rx="16" fill="white" stroke="#D9E1ED" stroke-width="2" filter="url(#shadow)"/><path d="M516,900H1284Q1300,900 1300,916V980H500V916Q500,900 516,900" fill="#087F8C"/>
+<text x="528" y="943" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#FFFFFF" text-anchor="start" dominant-baseline="middle">developer_profiles</text>
+<text x="528" y="1018" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#526782" text-anchor="start" dominant-baseline="middle">KEY</text>
+<text x="650" y="1018" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#526782" text-anchor="start" dominant-baseline="middle">COLUMN</text>
+<text x="1275" y="1018" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#526782" text-anchor="end" dominant-baseline="middle">TYPE</text>
+<line x1="500" y1="1043" x2="1300" y2="1043" stroke="#D9E1ED" stroke-width="2"/>
+<rect x="501" y="1045" width="798" height="50" fill="#F5F8FC"/>
+<text x="528" y="1070" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#B27514" text-anchor="start" dominant-baseline="middle">PK</text>
+<text x="650" y="1070" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#172B4D" text-anchor="start" dominant-baseline="middle">id</text>
+<text x="1275" y="1070" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">INT</text>
+<text x="528" y="1120" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#087F8C" text-anchor="start" dominant-baseline="middle">UK/FK</text>
+<text x="650" y="1120" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">user_id</text>
+<text x="1275" y="1120" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">INT</text>
+<rect x="501" y="1145" width="798" height="50" fill="#F5F8FC"/>
+<text x="528" y="1170" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#087F8C" text-anchor="start" dominant-baseline="middle"></text>
+<text x="650" y="1170" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">bio</text>
+<text x="1275" y="1170" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">TEXT</text>
+<text x="528" y="1220" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#087F8C" text-anchor="start" dominant-baseline="middle"></text>
+<text x="650" y="1220" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">phone</text>
+<text x="1275" y="1220" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">VARCHAR(30)</text>
+<rect x="501" y="1245" width="798" height="50" fill="#F5F8FC"/>
+<text x="528" y="1270" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#087F8C" text-anchor="start" dominant-baseline="middle"></text>
+<text x="650" y="1270" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">location</text>
+<text x="1275" y="1270" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">VARCHAR(100)</text>
+<text x="528" y="1320" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#087F8C" text-anchor="start" dominant-baseline="middle"></text>
+<text x="650" y="1320" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">education</text>
+<text x="1275" y="1320" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">VARCHAR(160)</text>
+<rect x="501" y="1345" width="798" height="50" fill="#F5F8FC"/>
+<text x="528" y="1370" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#087F8C" text-anchor="start" dominant-baseline="middle"></text>
+<text x="650" y="1370" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">experience</text>
+<text x="1275" y="1370" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">VARCHAR(160)</text>
+<text x="528" y="1420" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#087F8C" text-anchor="start" dominant-baseline="middle"></text>
+<text x="650" y="1420" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">github_url</text>
+<text x="1275" y="1420" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">VARCHAR(250)</text>
+<rect x="501" y="1445" width="798" height="50" fill="#F5F8FC"/>
+<text x="528" y="1470" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#087F8C" text-anchor="start" dominant-baseline="middle"></text>
+<text x="650" y="1470" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">linkedin_url</text>
+<text x="1275" y="1470" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">VARCHAR(250)</text>
+<text x="528" y="1520" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#087F8C" text-anchor="start" dominant-baseline="middle"></text>
+<text x="650" y="1520" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">resume_path</text>
+<text x="1275" y="1520" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">VARCHAR(255)</text>
+<rect x="2550" y="900" width="800" height="510" rx="16" fill="white" stroke="#D9E1ED" stroke-width="2" filter="url(#shadow)"/><path d="M2566,900H3334Q3350,900 3350,916V980H2550V916Q2550,900 2566,900" fill="#2858B8"/>
+<text x="2578" y="943" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#FFFFFF" text-anchor="start" dominant-baseline="middle">recruiter_profiles</text>
+<text x="2578" y="1018" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#526782" text-anchor="start" dominant-baseline="middle">KEY</text>
+<text x="2700" y="1018" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#526782" text-anchor="start" dominant-baseline="middle">COLUMN</text>
+<text x="3325" y="1018" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#526782" text-anchor="end" dominant-baseline="middle">TYPE</text>
+<line x1="2550" y1="1043" x2="3350" y2="1043" stroke="#D9E1ED" stroke-width="2"/>
+<rect x="2551" y="1045" width="798" height="50" fill="#F5F8FC"/>
+<text x="2578" y="1070" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#B27514" text-anchor="start" dominant-baseline="middle">PK</text>
+<text x="2700" y="1070" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#172B4D" text-anchor="start" dominant-baseline="middle">id</text>
+<text x="3325" y="1070" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">INT</text>
+<text x="2578" y="1120" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#2858B8" text-anchor="start" dominant-baseline="middle">UK/FK</text>
+<text x="2700" y="1120" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">user_id</text>
+<text x="3325" y="1120" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">INT</text>
+<rect x="2551" y="1145" width="798" height="50" fill="#F5F8FC"/>
+<text x="2578" y="1170" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#2858B8" text-anchor="start" dominant-baseline="middle"></text>
+<text x="2700" y="1170" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">company_name</text>
+<text x="3325" y="1170" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">VARCHAR(140)</text>
+<text x="2578" y="1220" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#2858B8" text-anchor="start" dominant-baseline="middle"></text>
+<text x="2700" y="1220" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">company_description</text>
+<text x="3325" y="1220" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">TEXT</text>
+<rect x="2551" y="1245" width="798" height="50" fill="#F5F8FC"/>
+<text x="2578" y="1270" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#2858B8" text-anchor="start" dominant-baseline="middle"></text>
+<text x="2700" y="1270" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">location</text>
+<text x="3325" y="1270" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">VARCHAR(100)</text>
+<text x="2578" y="1320" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#2858B8" text-anchor="start" dominant-baseline="middle"></text>
+<text x="2700" y="1320" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">website</text>
+<text x="3325" y="1320" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">VARCHAR(250)</text>
+<rect x="150" y="1800" width="650" height="500" rx="16" fill="white" stroke="#D9E1ED" stroke-width="2" filter="url(#shadow)"/><path d="M166,1800H784Q800,1800 800,1816V1880H150V1816Q150,1800 166,1800" fill="#087F8C"/>
+<text x="178" y="1843" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#FFFFFF" text-anchor="start" dominant-baseline="middle">skills</text>
+<text x="178" y="1918" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#526782" text-anchor="start" dominant-baseline="middle">KEY</text>
+<text x="300" y="1918" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#526782" text-anchor="start" dominant-baseline="middle">COLUMN</text>
+<text x="775" y="1918" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#526782" text-anchor="end" dominant-baseline="middle">TYPE</text>
+<line x1="150" y1="1943" x2="800" y2="1943" stroke="#D9E1ED" stroke-width="2"/>
+<rect x="151" y="1945" width="648" height="50" fill="#F5F8FC"/>
+<text x="178" y="1970" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#B27514" text-anchor="start" dominant-baseline="middle">PK</text>
+<text x="300" y="1970" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#172B4D" text-anchor="start" dominant-baseline="middle">id</text>
+<text x="775" y="1970" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">INT</text>
+<text x="178" y="2020" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#087F8C" text-anchor="start" dominant-baseline="middle">FK</text>
+<text x="300" y="2020" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">developer_id</text>
+<text x="775" y="2020" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">INT</text>
+<rect x="151" y="2045" width="648" height="50" fill="#F5F8FC"/>
+<text x="178" y="2070" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#087F8C" text-anchor="start" dominant-baseline="middle"></text>
+<text x="300" y="2070" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">name</text>
+<text x="775" y="2070" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">VARCHAR(80)</text>
+<text x="178" y="2120" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#087F8C" text-anchor="start" dominant-baseline="middle"></text>
+<text x="300" y="2120" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">level</text>
+<text x="775" y="2120" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">VARCHAR(30)</text>
+<rect x="151" y="2145" width="648" height="50" fill="#F5F8FC"/>
+<text x="178" y="2170" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#087F8C" text-anchor="start" dominant-baseline="middle"></text>
+<text x="300" y="2170" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">years</text>
+<text x="775" y="2170" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">FLOAT</text>
+<text x="178" y="2235" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#087F8C" text-anchor="start" dominant-baseline="middle">UNIQUE (developer_id, name)</text>
+<rect x="1000" y="1800" width="650" height="510" rx="16" fill="white" stroke="#D9E1ED" stroke-width="2" filter="url(#shadow)"/><path d="M1016,1800H1634Q1650,1800 1650,1816V1880H1000V1816Q1000,1800 1016,1800" fill="#087F8C"/>
+<text x="1028" y="1843" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#FFFFFF" text-anchor="start" dominant-baseline="middle">projects</text>
+<text x="1028" y="1918" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#526782" text-anchor="start" dominant-baseline="middle">KEY</text>
+<text x="1150" y="1918" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#526782" text-anchor="start" dominant-baseline="middle">COLUMN</text>
+<text x="1625" y="1918" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#526782" text-anchor="end" dominant-baseline="middle">TYPE</text>
+<line x1="1000" y1="1943" x2="1650" y2="1943" stroke="#D9E1ED" stroke-width="2"/>
+<rect x="1001" y="1945" width="648" height="50" fill="#F5F8FC"/>
+<text x="1028" y="1970" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#B27514" text-anchor="start" dominant-baseline="middle">PK</text>
+<text x="1150" y="1970" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#172B4D" text-anchor="start" dominant-baseline="middle">id</text>
+<text x="1625" y="1970" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">INT</text>
+<text x="1028" y="2020" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#087F8C" text-anchor="start" dominant-baseline="middle">FK</text>
+<text x="1150" y="2020" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">developer_id</text>
+<text x="1625" y="2020" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">INT</text>
+<rect x="1001" y="2045" width="648" height="50" fill="#F5F8FC"/>
+<text x="1028" y="2070" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#087F8C" text-anchor="start" dominant-baseline="middle"></text>
+<text x="1150" y="2070" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">name</text>
+<text x="1625" y="2070" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">VARCHAR(140)</text>
+<text x="1028" y="2120" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#087F8C" text-anchor="start" dominant-baseline="middle"></text>
+<text x="1150" y="2120" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">description</text>
+<text x="1625" y="2120" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">TEXT</text>
+<rect x="1001" y="2145" width="648" height="50" fill="#F5F8FC"/>
+<text x="1028" y="2170" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#087F8C" text-anchor="start" dominant-baseline="middle"></text>
+<text x="1150" y="2170" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">github_link</text>
+<text x="1625" y="2170" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">VARCHAR(250)</text>
+<text x="1028" y="2220" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#087F8C" text-anchor="start" dominant-baseline="middle"></text>
+<text x="1150" y="2220" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">project_link</text>
+<text x="1625" y="2220" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">VARCHAR(250)</text>
+<rect x="1000" y="2500" width="650" height="550" rx="16" fill="white" stroke="#D9E1ED" stroke-width="2" filter="url(#shadow)"/><path d="M1016,2500H1634Q1650,2500 1650,2516V2580H1000V2516Q1000,2500 1016,2500" fill="#087F8C"/>
+<text x="1028" y="2543" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#FFFFFF" text-anchor="start" dominant-baseline="middle">project_technologies</text>
+<text x="1028" y="2618" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#526782" text-anchor="start" dominant-baseline="middle">KEY</text>
+<text x="1150" y="2618" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#526782" text-anchor="start" dominant-baseline="middle">COLUMN</text>
+<text x="1625" y="2618" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#526782" text-anchor="end" dominant-baseline="middle">TYPE</text>
+<line x1="1000" y1="2643" x2="1650" y2="2643" stroke="#D9E1ED" stroke-width="2"/>
+<rect x="1001" y="2645" width="648" height="50" fill="#F5F8FC"/>
+<text x="1028" y="2670" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#B27514" text-anchor="start" dominant-baseline="middle">PK</text>
+<text x="1150" y="2670" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#172B4D" text-anchor="start" dominant-baseline="middle">id</text>
+<text x="1625" y="2670" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">INT</text>
+<text x="1028" y="2720" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#087F8C" text-anchor="start" dominant-baseline="middle">FK</text>
+<text x="1150" y="2720" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">project_id</text>
+<text x="1625" y="2720" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">INT</text>
+<rect x="1001" y="2745" width="648" height="50" fill="#F5F8FC"/>
+<text x="1028" y="2770" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#087F8C" text-anchor="start" dominant-baseline="middle"></text>
+<text x="1150" y="2770" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">name</text>
+<text x="1625" y="2770" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">VARCHAR(80)</text>
+<text x="1028" y="2820" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#087F8C" text-anchor="start" dominant-baseline="middle"></text>
+<text x="1150" y="2820" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">category</text>
+<text x="1625" y="2820" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">VARCHAR(40)</text>
+<rect x="1001" y="2845" width="648" height="50" fill="#F5F8FC"/>
+<text x="1028" y="2870" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#087F8C" text-anchor="start" dominant-baseline="middle"></text>
+<text x="1150" y="2870" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">version</text>
+<text x="1625" y="2870" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">VARCHAR(40)</text>
+<text x="1028" y="2920" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#087F8C" text-anchor="start" dominant-baseline="middle"></text>
+<text x="1150" y="2920" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">added_at</text>
+<text x="1625" y="2920" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">DATETIME</text>
+<text x="1028" y="2985" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#087F8C" text-anchor="start" dominant-baseline="middle">UNIQUE (project_id, name)</text>
+<rect x="2750" y="1560" width="700" height="710" rx="16" fill="white" stroke="#D9E1ED" stroke-width="2" filter="url(#shadow)"/><path d="M2766,1560H3434Q3450,1560 3450,1576V1640H2750V1576Q2750,1560 2766,1560" fill="#2858B8"/>
+<text x="2778" y="1603" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#FFFFFF" text-anchor="start" dominant-baseline="middle">jobs</text>
+<text x="2778" y="1678" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#526782" text-anchor="start" dominant-baseline="middle">KEY</text>
+<text x="2900" y="1678" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#526782" text-anchor="start" dominant-baseline="middle">COLUMN</text>
+<text x="3425" y="1678" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#526782" text-anchor="end" dominant-baseline="middle">TYPE</text>
+<line x1="2750" y1="1703" x2="3450" y2="1703" stroke="#D9E1ED" stroke-width="2"/>
+<rect x="2751" y="1705" width="698" height="50" fill="#F5F8FC"/>
+<text x="2778" y="1730" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#B27514" text-anchor="start" dominant-baseline="middle">PK</text>
+<text x="2900" y="1730" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#172B4D" text-anchor="start" dominant-baseline="middle">id</text>
+<text x="3425" y="1730" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">INT</text>
+<text x="2778" y="1780" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#2858B8" text-anchor="start" dominant-baseline="middle">FK</text>
+<text x="2900" y="1780" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">recruiter_id</text>
+<text x="3425" y="1780" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">INT</text>
+<rect x="2751" y="1805" width="698" height="50" fill="#F5F8FC"/>
+<text x="2778" y="1830" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#2858B8" text-anchor="start" dominant-baseline="middle"></text>
+<text x="2900" y="1830" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">title</text>
+<text x="3425" y="1830" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">VARCHAR(150)</text>
+<text x="2778" y="1880" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#2858B8" text-anchor="start" dominant-baseline="middle"></text>
+<text x="2900" y="1880" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">description</text>
+<text x="3425" y="1880" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">TEXT</text>
+<rect x="2751" y="1905" width="698" height="50" fill="#F5F8FC"/>
+<text x="2778" y="1930" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#2858B8" text-anchor="start" dominant-baseline="middle"></text>
+<text x="2900" y="1930" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">location</text>
+<text x="3425" y="1930" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">VARCHAR(100)</text>
+<text x="2778" y="1980" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#2858B8" text-anchor="start" dominant-baseline="middle"></text>
+<text x="2900" y="1980" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">salary</text>
+<text x="3425" y="1980" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">VARCHAR(100)</text>
+<rect x="2751" y="2005" width="698" height="50" fill="#F5F8FC"/>
+<text x="2778" y="2030" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#2858B8" text-anchor="start" dominant-baseline="middle"></text>
+<text x="2900" y="2030" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">experience_required</text>
+<text x="3425" y="2030" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">VARCHAR(100)</text>
+<text x="2778" y="2080" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#2858B8" text-anchor="start" dominant-baseline="middle"></text>
+<text x="2900" y="2080" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">job_type</text>
+<text x="3425" y="2080" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">VARCHAR(40)</text>
+<rect x="2751" y="2105" width="698" height="50" fill="#F5F8FC"/>
+<text x="2778" y="2130" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#2858B8" text-anchor="start" dominant-baseline="middle"></text>
+<text x="2900" y="2130" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">deadline</text>
+<text x="3425" y="2130" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">DATE</text>
+<text x="2778" y="2180" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#2858B8" text-anchor="start" dominant-baseline="middle"></text>
+<text x="2900" y="2180" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">created_at</text>
+<text x="3425" y="2180" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">DATETIME</text>
+<rect x="2850" y="2500" width="700" height="550" rx="16" fill="white" stroke="#D9E1ED" stroke-width="2" filter="url(#shadow)"/><path d="M2866,2500H3534Q3550,2500 3550,2516V2580H2850V2516Q2850,2500 2866,2500" fill="#2858B8"/>
+<text x="2878" y="2543" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#FFFFFF" text-anchor="start" dominant-baseline="middle">job_skills</text>
+<text x="2878" y="2618" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#526782" text-anchor="start" dominant-baseline="middle">KEY</text>
+<text x="3000" y="2618" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#526782" text-anchor="start" dominant-baseline="middle">COLUMN</text>
+<text x="3525" y="2618" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#526782" text-anchor="end" dominant-baseline="middle">TYPE</text>
+<line x1="2850" y1="2643" x2="3550" y2="2643" stroke="#D9E1ED" stroke-width="2"/>
+<rect x="2851" y="2645" width="698" height="50" fill="#F5F8FC"/>
+<text x="2878" y="2670" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#B27514" text-anchor="start" dominant-baseline="middle">PK</text>
+<text x="3000" y="2670" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#172B4D" text-anchor="start" dominant-baseline="middle">id</text>
+<text x="3525" y="2670" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">INT</text>
+<text x="2878" y="2720" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#2858B8" text-anchor="start" dominant-baseline="middle">FK</text>
+<text x="3000" y="2720" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">job_id</text>
+<text x="3525" y="2720" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">INT</text>
+<rect x="2851" y="2745" width="698" height="50" fill="#F5F8FC"/>
+<text x="2878" y="2770" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#2858B8" text-anchor="start" dominant-baseline="middle"></text>
+<text x="3000" y="2770" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">name</text>
+<text x="3525" y="2770" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">VARCHAR(80)</text>
+<text x="2878" y="2820" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#2858B8" text-anchor="start" dominant-baseline="middle"></text>
+<text x="3000" y="2820" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">importance</text>
+<text x="3525" y="2820" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">VARCHAR(20)</text>
+<rect x="2851" y="2845" width="698" height="50" fill="#F5F8FC"/>
+<text x="2878" y="2870" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#2858B8" text-anchor="start" dominant-baseline="middle"></text>
+<text x="3000" y="2870" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">minimum_years</text>
+<text x="3525" y="2870" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">FLOAT</text>
+<text x="2878" y="2920" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#2858B8" text-anchor="start" dominant-baseline="middle"></text>
+<text x="3000" y="2920" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">added_at</text>
+<text x="3525" y="2920" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">DATETIME</text>
+<text x="2878" y="2985" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#2858B8" text-anchor="start" dominant-baseline="middle">UNIQUE (job_id, name)</text>
+<rect x="1900" y="2500" width="700" height="500" rx="16" fill="white" stroke="#D9E1ED" stroke-width="2" filter="url(#shadow)"/><path d="M1916,2500H2584Q2600,2500 2600,2516V2580H1900V2516Q1900,2500 1916,2500" fill="#7351A8"/>
+<text x="1928" y="2543" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#FFFFFF" text-anchor="start" dominant-baseline="middle">applications</text>
+<text x="1928" y="2618" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#526782" text-anchor="start" dominant-baseline="middle">KEY</text>
+<text x="2050" y="2618" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#526782" text-anchor="start" dominant-baseline="middle">COLUMN</text>
+<text x="2575" y="2618" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#526782" text-anchor="end" dominant-baseline="middle">TYPE</text>
+<line x1="1900" y1="2643" x2="2600" y2="2643" stroke="#D9E1ED" stroke-width="2"/>
+<rect x="1901" y="2645" width="698" height="50" fill="#F5F8FC"/>
+<text x="1928" y="2670" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#B27514" text-anchor="start" dominant-baseline="middle">PK</text>
+<text x="2050" y="2670" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#172B4D" text-anchor="start" dominant-baseline="middle">id</text>
+<text x="2575" y="2670" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">INT</text>
+<text x="1928" y="2720" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#7351A8" text-anchor="start" dominant-baseline="middle">FK</text>
+<text x="2050" y="2720" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">developer_id</text>
+<text x="2575" y="2720" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">INT</text>
+<rect x="1901" y="2745" width="698" height="50" fill="#F5F8FC"/>
+<text x="1928" y="2770" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#7351A8" text-anchor="start" dominant-baseline="middle">FK</text>
+<text x="2050" y="2770" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">job_id</text>
+<text x="2575" y="2770" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">INT</text>
+<text x="1928" y="2820" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#7351A8" text-anchor="start" dominant-baseline="middle"></text>
+<text x="2050" y="2820" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">status</text>
+<text x="2575" y="2820" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">VARCHAR(30)</text>
+<rect x="1901" y="2845" width="698" height="50" fill="#F5F8FC"/>
+<text x="1928" y="2870" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#7351A8" text-anchor="start" dominant-baseline="middle"></text>
+<text x="2050" y="2870" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">created_at</text>
+<text x="2575" y="2870" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">DATETIME</text>
+<text x="1928" y="2935" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#7351A8" text-anchor="start" dominant-baseline="middle">UNIQUE (developer_id, job_id)</text>
+<rect x="1850" y="1800" width="650" height="560" rx="16" fill="white" stroke="#D9E1ED" stroke-width="2" filter="url(#shadow)"/><path d="M1866,1800H2484Q2500,1800 2500,1816V1880H1850V1816Q1850,1800 1866,1800" fill="#087F8C"/>
+<text x="1878" y="1843" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#FFFFFF" text-anchor="start" dominant-baseline="middle">resume_analysis</text>
+<text x="1878" y="1918" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#526782" text-anchor="start" dominant-baseline="middle">KEY</text>
+<text x="2000" y="1918" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#526782" text-anchor="start" dominant-baseline="middle">COLUMN</text>
+<text x="2475" y="1918" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#526782" text-anchor="end" dominant-baseline="middle">TYPE</text>
+<line x1="1850" y1="1943" x2="2500" y2="1943" stroke="#D9E1ED" stroke-width="2"/>
+<rect x="1851" y="1945" width="648" height="50" fill="#F5F8FC"/>
+<text x="1878" y="1970" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#B27514" text-anchor="start" dominant-baseline="middle">PK</text>
+<text x="2000" y="1970" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#172B4D" text-anchor="start" dominant-baseline="middle">id</text>
+<text x="2475" y="1970" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">INT</text>
+<text x="1878" y="2020" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#087F8C" text-anchor="start" dominant-baseline="middle">FK</text>
+<text x="2000" y="2020" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">developer_id</text>
+<text x="2475" y="2020" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">INT</text>
+<rect x="1851" y="2045" width="648" height="50" fill="#F5F8FC"/>
+<text x="1878" y="2070" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#087F8C" text-anchor="start" dominant-baseline="middle"></text>
+<text x="2000" y="2070" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">summary</text>
+<text x="2475" y="2070" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">TEXT</text>
+<text x="1878" y="2120" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#087F8C" text-anchor="start" dominant-baseline="middle"></text>
+<text x="2000" y="2120" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">strengths</text>
+<text x="2475" y="2120" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">TEXT</text>
+<rect x="1851" y="2145" width="648" height="50" fill="#F5F8FC"/>
+<text x="1878" y="2170" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#087F8C" text-anchor="start" dominant-baseline="middle"></text>
+<text x="2000" y="2170" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">missing_skills</text>
+<text x="2475" y="2170" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">TEXT</text>
+<text x="1878" y="2220" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#087F8C" text-anchor="start" dominant-baseline="middle"></text>
+<text x="2000" y="2220" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">extracted_skills</text>
+<text x="2475" y="2220" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">TEXT</text>
+<rect x="1851" y="2245" width="648" height="50" fill="#F5F8FC"/>
+<text x="1878" y="2270" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#087F8C" text-anchor="start" dominant-baseline="middle"></text>
+<text x="2000" y="2270" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#172B4D" text-anchor="start" dominant-baseline="middle">created_at</text>
+<text x="2475" y="2270" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#526782" text-anchor="end" dominant-baseline="middle">DATETIME</text>
+<line x1="150" y1="3095" x2="3650" y2="3095" stroke="#D9E1ED" stroke-width="3"/>
+<text x="1900" y="3160" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#172B4D" text-anchor="middle" dominant-baseline="middle">PK  Primary key     FK  Foreign key     UK  Unique column     UNIQUE (…)  Unique column combination</text>
+<text x="1900" y="3230" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#526782" text-anchor="middle" dominant-baseline="middle">Connectors run from a foreign-key column to its referenced primary key. Labels show parent-to-child cardinality.</text>
+<text x="1900" y="3290" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#526782" text-anchor="middle" dominant-baseline="middle">Profiles are optional 1:1 relationships. Developer and Job form an M:N relationship through Applications.</text>
+</svg>

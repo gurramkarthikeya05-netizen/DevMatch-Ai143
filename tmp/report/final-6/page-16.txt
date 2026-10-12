@@ -1,0 +1,29 @@
+DevMatch AI 
+Dept. of ECE, CMRIT 2026-2027 Page 8
+3.3 Database Tables continued
+Jobs contain vacancy details while job_skills stores one named requirement per row. The 
+recruiter_id foreign key connects each vacancy to its owner. Table 3.3 lists the job 
+columns and requirement attributes.
+Table 3.3 Job tables
+Table Attribute Type Key or role
+jobs id Integer PK
+jobs recruiter_id Integer FK recruiter_profiles.id
+jobs title String(150) Attribute
+jobs description Text Attribute
+jobs location String(100) Attribute
+jobs salary String(100) Attribute
+jobs experience_required String(100) Attribute
+jobs job_type String(40) Attribute
+jobs deadline Date Attribute
+jobs created_at DateTime Attribute
+job_skills id Integer PK
+job_skills job_id Integer FK jobs.id
+job_skills name String(80) Attribute
+job_skills importance String(20) Attribute
+job_skills minimum_years Float Attribute
+job_skills added_at DateTime Attribute
+The job_id and name pair is unique in job_skills. The current matching function compares 
+every stored job skill name; importance and minimum_years are recorded but are not 
+weighted in the score. The application model declares salary as String(100), while the 
+SQL demonstration widens it to VARCHAR(150) using ALTER TABLE. This deliberate 
+DDL change can therefore differ from the original model declaration.

@@ -1,0 +1,35 @@
+DevMatch AI 
+Dept. of ECE, CMRIT 2026–2027Page 15
+4.3 Back End Code continued
+SQL queries view and trigger
+The supplied mysql_demo.sql demonstrates joins, grouping, filtering, a view and status 
+auditing. The following view combines job ownership with application counts, including 
+jobs with no applicants because the application join is a LEFT JOIN.
+CREATE OR REPLACE VIEW job_application_summary AS
+SELECT j.id AS job_id, j.title, r.company_name,
+ COUNT(a.id) AS applicant_count,
+ SUM(CASE WHEN a.status = 'Shortlisted'
+ THEN 1 ELSE 0 END) AS shortlisted_count
+FROM jobs j
+JOIN recruiter_profiles r ON r.id = j.recruiter_id
+LEFT JOIN applications a ON a.job_id = j.id
+GROUP BY j.id, j.title, r.company_name;
+The status trigger creates an audit row only when an UPDATE changes the application 
+status. The SQL script separately backfills initial status records for existing applications. 
+It does not install an INSERT trigger for every future application.
+DELIMITER $$
+CREATE TRIGGER log_application_status
+AFTER UPDATE ON applications FOR EACH ROW
+BEGIN
+ IF OLD.status <> NEW.status THEN
+ INSERT INTO application_status_history
+ (application_id, old_status, new_status)
+ VALUES (NEW.id, OLD.status, NEW.status);
+ END IF;
+END$$
+DELIMITER ;
+The script also uses ALTER TABLE to widen the salary column and demonstrates 
+application INSERT, UPDATE and DELETE in a transaction ending in ROLLBACK. 
+This keeps the transaction’s test application from persisting. Website CRUD actions 
+commit their changes; a new request reads updated records. The /dbms-demo page 
+queries MySQL again and disables browser caching.

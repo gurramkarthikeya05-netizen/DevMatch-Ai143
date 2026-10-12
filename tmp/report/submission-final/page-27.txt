@@ -1,0 +1,29 @@
+DevMatch AI 
+Dept. of ECE, CMRIT 2026-2027 Page 19
+Chapter 6
+CONCLUSION AND FUTURE SCOPE
+DevMatch AI implements a relational developer portfolio and hiring workflow with 
+separate developer and recruiter accounts. The database connects profiles, skills, projects, 
+vacancies, applications and resume analyses. The interface gives users a consistent way to 
+maintain their information and gives recruiters a visible record of candidate skill matches 
+and application decisions.
+The local schema verification passed the required minimums for the ten application 
+tables. The SQL audit extension was also present with related history records. The project 
+demonstrates primary and foreign keys, uniqueness constraints, normalized repeating 
+values, CRUD, joins, filtering, grouping, a summary view and a status change trigger. 
+The website and SQL demonstration query the same MySQL database.
+Learning outcomes
+The project develops practical understanding of ER modeling, mapping cardinalities to 
+foreign keys and bridge tables, removing multivalued attributes and connecting database 
+transactions to user workflows. It also illustrates why ownership checks and constraints 
+must support interface validation. Explainable matching shows how a computed result 
+can be connected to stored evidence.
+Future scope
+Future work can introduce schema migration tooling, automated regression tests, 
+concurrency handling for duplicate submissions and a more complete event history. 
+Resume analysis can add OCR for scanned documents, a controlled skill vocabulary and 
+explicit evaluation against labeled examples. Matching can account for verified 
+proficiency and job priorities, while keeping recruiter review available.
+Further extensions include interview scheduling, notifications, analytics and accessibility 
+improvements. Public deployment would benefit from file scanning, backups, monitoring 
+and resume retention controls. MySQL remains the application database.

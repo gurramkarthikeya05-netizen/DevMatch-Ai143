@@ -1,0 +1,28 @@
+DevMatch AI – Developer Portfolio & Hiring Platform
+Dept. of ECE, CMRIT 2026-2027 Page 1
+CHAPTER 1
+INTRODUCTION
+DevMatch AI is a web application that brings developer portfolios, job postings and 
+application tracking into one relational database. A developer can present skills and 
+projects, upload a resume, search jobs and monitor applications. A recruiter can maintain 
+a company profile, publish vacancies and examine the evidence behind each candidate’s 
+skill match.
+The project addresses the difficulty of keeping hiring information consistent when 
+profiles, resumes, vacancies and application decisions are handled separately. Repeated 
+candidate details and unstructured skill lists make searching and comparison difficult. 
+DevMatch AI stores related information in dedicated MySQL tables and links records 
+through primary and foreign keys.
+The system uses Flask for request handling, SQLAlchemy for database access and 
+HTML, CSS and JavaScript for presentation. PDF text extraction provides resume 
+evidence. Gemini can optionally produce a structured analysis, while a deterministic 
+extraction path allows the resume workflow to function without an AI service. Supabase 
+is used only for optional private resume file storage.
+The DBMS contribution is the design and implementation of ten application tables, 
+normalized skill and project technology records, uniqueness constraints and relational 
+queries. A separate SQL demonstration adds a view and an application status audit 
+trigger. The report explains the requirements, design, implementation and observed local 
+results of these components.
+Skill matching is intended to support review. The score measures coverage of a job’s 
+recorded skill names, and it does not measure overall competence or predict hiring 
+success. The recruiter can revise the initial application status after examining the portfolio 
+and resume.

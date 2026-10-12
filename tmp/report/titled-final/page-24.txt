@@ -1,0 +1,15 @@
+DevMatch AI – Developer Portfolio & Hiring Platform 
+Dept. of ECE, CMRIT 2026-2027 Page 16
+Chapter 5
+INTERPRETATION OF RESULT
+This chapter presents the main results of DevMatch AI. The snapshots show developer 
+portfolio management, job search and skill matching, and recruiter review of applications. 
+Each figure is followed by an interpretation of the displayed result.
+5.1 Result Snapshots
+Fig 5.1 Developer dashboard
+Interpretation: The developer dashboard displays the stored profile, skills, projects and 
+applications. The sample developer has three skills, one project and one application. The 
+application status is displayed alongside the job title. Skills and projects are stored in 
+child tables linked to the developer profile, while resume analysis is linked separately. 
+This result shows that portfolio information and application tracking are brought together 
+through relational database queries.

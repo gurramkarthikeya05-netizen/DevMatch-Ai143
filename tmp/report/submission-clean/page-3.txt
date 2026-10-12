@@ -1,0 +1,23 @@
+iii
+DECLARATION
+We, the students of VII semester from the Department of Electronics and Communication 
+Engineering, CMR Institute of Technology, Bangalore declare that the project work entitled 
+"DevMatch AI – Developer Portfolio & Hiring Platform" has been successfully completed under 
+the guidance of ____________________, designation ____________________, CMR Institute 
+of Technology, Bengaluru. This project work is submitted in partial fulfillment of the 
+requirements for the award of the Degree of Bachelor of Engineering in Electronics and 
+Communication Engineering during the academic year 2026-2027. The matter embodied in the 
+project report has not been submitted previously by anybody for the award of any degree or 
+diploma to any university.
+Place: ____________________
+Date: ____________________
+Team members:
+Name ____________________
+USN ____________________
+____________________
+Name ____________________
+USN ____________________
+____________________
+Name ____________________
+USN ____________________
+____________________

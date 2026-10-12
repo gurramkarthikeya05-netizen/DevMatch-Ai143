@@ -1,0 +1,8 @@
+DevMatch AITitle 
+Dept. of ECE, CMRIT 2026–2027Page 25
+Table Rows Attributes Related
+resume_analysis 6 7 Yes
+application_status_history 7 5 Yes
+The observed result confirms the row, attribute and relationship minimums. Developer and 
+recruiter login, dashboards and job pages loaded during screenshot capture. These observations do 
+not establish production capacity or semantic accuracy of AI analysis.

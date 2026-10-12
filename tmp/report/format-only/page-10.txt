@@ -1,0 +1,17 @@
+DevMatch AI 
+Dept. of ECE, CMRIT 2026-2027 Page 2
+1.1 Objectives
+• Maintain developer and recruiter accounts with role specific access to their records.
+• Store portfolios, skills, jobs, applications and resume analyses in related MySQL tables.
+• Normalize multivalued job skills and project technologies to support searching and 
+integrity.
+• Provide create, read, update and delete operations through the web interface.
+• Calculate a visible skill match using profile skills and the latest extracted resume skills.
+• Demonstrate keys, joins, filtering, grouping, views, transactions and a status history 
+trigger.
+1.2 Scope of the project
+The implemented scope includes registration and login, profile maintenance, developer 
+portfolio management, job search, recruiter job management, one application per 
+developer and job, PDF resume analysis, candidate discovery and application status 
+review. The DBMS demonstration page displays current job records from the same 
+MySQL database used by the application.

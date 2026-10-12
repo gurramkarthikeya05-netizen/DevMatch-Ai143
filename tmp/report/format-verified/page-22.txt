@@ -1,0 +1,35 @@
+DevMatch AI – Developer Portfolio & Hiring Platform
+Dept. of ECE, CMRIT 2026-2027 Page 14
+4.3 Back-end Code continued
+Resume analysis and storage modules
+The resume route accepts a PDF within the configured 5 MB request limit, sanitizes the 
+filename and extracts document text using PyMuPDF. Structured analysis is saved as a 
+ResumeAnalysis row linked to the developer. The matching function uses the latest 
+analysis rather than combining every historical upload.
+# Resume analysis module excerpt
+document = pymupdf.open(stream=data, filetype='pdf')
+text = '\n'.join(page.get_text() for page in document)[:25000]
+analysis = analyze_resume(text)
+db.session.add(ResumeAnalysis(developer_id=developer.id,
+ summary=analysis['summary'],
+ strengths=', '.join(analysis['strengths']),
+ missing_skills=', '.join(analysis['missing_skills']),
+ extracted_skills=', '.join(analysis['skills'])))
+db.session.commit()
+# Job management module excerpt
+job.skills = [JobSkill(name=skill) for skill in required]
+db.session.add(job)
+db.session.commit()
+job = Job.query.filter_by(id=id,
+ recruiter_id=current_user().recruiter.id).first_or_404()
+db.session.delete(job)
+db.session.commit()
+When a Gemini API key is configured, extracted resume text is submitted for structured 
+analysis. Without a key or when the analysis request fails, the local extraction path 
+identifies supported skills and returns a deterministic result. The career advisor uses the 
+developer’s profile and current job listings as context. It requires the configured AI 
+service.
+Local development can store PDF files in the upload directory. Production configuration 
+uses a private Supabase bucket, and the authenticated resume route retrieves the file. 
+MySQL stores the application records and resume path; Supabase’s PostgreSQL database 
+is not used by this project.

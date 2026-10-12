@@ -1,0 +1,13 @@
+v
+ACKNOWLEDGEMENT
+We express our gratitude to CMR Institute of Technology, Bengaluru, for providing the 
+facilities and academic environment to carry out this Database Management System mini project.
+We thank ____________________, Principal, CMR Institute of Technology, Bengaluru, 
+for encouragement and institutional support.
+We express our gratitude to ____________________, Head of the Department of 
+Electronics and Communication Engineering, CMR Institute of Technology, Bengaluru, for 
+support throughout the project.
+We thank our guide ____________________, designation ____________________, 
+CMR Institute of Technology, Bengaluru, for guidance during the project work.
+We thank our parents, friends and team members for their support and cooperation during 
+the completion of this project.

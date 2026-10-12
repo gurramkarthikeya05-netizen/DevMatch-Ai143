@@ -1,0 +1,6 @@
+DevMatch AITitle 
+Dept. of ECE, CMRIT 2026–2027Page 23
+Fig 5.4 Recruiter applicant review
+Fig 5.4 displays a 100 percent match for Python, Flask and MySQL, with all three supplied by the 
+profile. The interface explicitly indicates that the resume has not been analyzed. The recruiter sees 
+matched and missing evidence and can change the decision through the status control.

@@ -1,0 +1,31 @@
+DevMatch AITitle 
+Dept. of ECE, CMRIT 2026–2027Page 15
+4.2 Front End Code
+The front end is organized as Jinja templates extending base.html. Job cards are rendered 
+from the current query results. Each application form includes a CSRF token, and 
+developer only actions are conditionally displayed. The following excerpts come from 
+jobs.html, with line wrapping adjusted for the report.
+{% for job in jobs %}
+<article class="job-row">
+ <div class="small-muted">
+ {{job.recruiter.company_name}} · {{job.location}}
+ </div>
+ <h2>{{job.title}}</h2>
+ <p>{{job.description}}</p>
+ {% for skill in job.required_skills.split(',') %}
+ <span>{{skill.strip()}}</span>
+ {% endfor %}
+</article>
+{% endfor %}
+The apply form submits to the Flask route for the selected job. The server rechecks 
+identity, eligibility and existing applications; conditional rendering alone is not used as 
+the access control.
+<form method="post"
+ action="{{url_for('apply',id=job.id)}}">
+ <input type="hidden" name="csrf" value="{{csrf}}">
+ <button class="button small">Apply now ↗</button>
+</form>
+The developer dashboard summarizes skills, projects and applications, while the recruiter 
+dashboard exposes job management and applicant review. Search forms use query 
+parameters for role or skill and location. JavaScript enhances interaction, and responsive 
+CSS adapts the page layout to available screen width.

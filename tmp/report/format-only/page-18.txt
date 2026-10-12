@@ -1,0 +1,25 @@
+DevMatch AI 
+Dept. of ECE, CMRIT 2026-2027 Page 10
+Chapter 4
+IMPLEMENTATION
+The implementation connects browser forms to Flask routes, validates the request, reads 
+or changes SQLAlchemy models and commits successful changes to MySQL. Jinja 
+templates render the resulting records. The modules include accounts, portfolios, recruiter 
+jobs, applications, resume analysis, skill matching and database demonstrations.
+4.1 Installation Steps for Execution of the Project
+Create a virtual environment in the devmatch-ai folder and install the project 
+requirements. Create a MySQL database named devmatch_ai and an application user with 
+access to that database. Copy .env.example to .env and set DATABASE_URL to the 
+MySQL connection URL and SECRET_KEY to a private random value. Keep credentials 
+outside source code.
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+flask --app app init-db
+flask --app app seed-demo
+flask --app app verify-dbms
+flask --app app run --debug
+Open the local Flask address in a browser. Run mysql_demo.sql in the same MySQL 
+database to create the summary view, audit table and status trigger. The seed command 
+supplies demonstration accounts and records; it should be used in a dedicated demo 
+database. The verifier checks table rows, attributes and relationships.

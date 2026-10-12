@@ -1,0 +1,12 @@
+DevMatch AITitle 
+Dept. of ECE, CMRIT 2026–2027Page 20
+Chapter 5
+INTERPRETATION OF RESULT
+The following screenshots show the locally running application connected to MySQL. 
+They illustrate public navigation, portfolio records, job matching and recruiter review. 
+Figure captions and interpretations relate each interface to its stored data.
+5.1 Result Snapshots
+Fig 5.1 Public home page
+The home page in Fig 5.1 provides job search and account entry points. The displayed vacancy 
+count comes from the database. Visitors can browse opportunities before logging in, while 
+application submission requires a developer account.

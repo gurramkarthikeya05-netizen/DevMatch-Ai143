@@ -1,0 +1,4 @@
+DevMatch AITitle 
+Dept. of ECE, CMRIT 2026–2027Page 13
+rather than treating it as a normalized skill relation. The unique application pair and foreign keys 
+enforce important integrity rules.

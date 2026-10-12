@@ -1,0 +1,34 @@
+ii
+CMR INSTITUTE OF TECHNOLOGY
+Affiliated to VTU, Approved by AICTE, Accredited by NBA and NAAC with “A++” Grade
+ITPL MAIN ROAD, BROOKFIELD, BENGALURU-560037, KARNATAKA, INDIA 
+DEPARTMENT OF ELECTRONICS AND COMMUNICATION ENGINEERING
+CERTIFICATE
+This is to certify that the Database Management System Project work entitled "DevMatch AI" 
+has been carried out by ____________________, USN ____________________, 
+____________________, USN ____________________, and ____________________, USN 
+____________________, bonafide students of CMR Institute of Technology, Bengaluru in 
+partial fulfillment for the award of the Degree of Bachelor of Engineering in Electronics and 
+Communication Engineering of the Visvesvaraya Technological University, Belagavi during 
+the year 2026-27. It is certified that all corrections/suggestions indicated for the Internal 
+Assessment have been incorporated in the report deposited in the departmental library. This 
+Database Management System Project report has been approved as it satisfies the academic 
+requirements in respect of project work prescribed for the said Degree.
+_____________________________
+________________________
+Signature of Guide
+Name ____________________
+Designation 
+____________________
+Dr. Sanchari Saha, 
+Associate Professor 
+Dept. of CSE, CMRIT
+_____________________________
+________________________
+Signature of HOD
+Name ____________________
+Designation 
+____________________
+Dr. Pappa M
+Professor & HoD
+Dept. of ECE, CMRIT

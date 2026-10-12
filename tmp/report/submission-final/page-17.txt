@@ -1,0 +1,32 @@
+DevMatch AI 
+Dept. of ECE, CMRIT 2026-2027 Page 9
+3.3 Database Tables continued
+Applications resolve the developer and job association. Resume analyses hold extracted 
+information used by the matching function. Status history is a separate SQL audit table, created 
+only when the demonstration script is run.
+Table 3.4 Application and analysis tables
+Table Attribute Type Key or role
+applications id Integer PK
+applications developer_id Integer FK developer_profiles.id
+applications job_id Integer FK jobs.id
+applications status String(30) Attribute
+applications created_at DateTime Attribute
+resume_analysis id Integer PK
+resume_analysis developer_id Integer FK developer_profiles.id
+resume_analysis summary Text Attribute
+resume_analysis strengths Text Attribute
+resume_analysis missing_skills Text Attribute
+resume_analysis extracted_skills Text Attribute
+resume_analysis created_at DateTime Attribute
+application_status_history id INT PK
+application_status_history application_id INT FK applications.id
+application_status_history old_status VARCHAR(30) Nullable
+application_status_history new_status VARCHAR(30) Required
+application_status_history changed_at DATETIME Timestamp
+Normalization and integrity
+First normal form is supported by individual skill and technology rows. Second normal form 
+keeps each non key fact associated with its complete entity or parent and value pair. Third normal 
+form separates credentials, profiles, vacancies and application events. Resume text fields store 
+summaries or extracted text as analysis payloads; the matching routine parses extracted skill text 
+rather than treating it as a normalized skill relation. The unique application pair and foreign keys 
+enforce important integrity rules.

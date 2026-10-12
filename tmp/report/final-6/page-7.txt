@@ -1,0 +1,10 @@
+vii
+LIST OF FIGURES
+Figure Page No.
+Fig 3.1 Relational schema 4
+Fig 3.2 Entity relationships and cardinalities 5
+Fig 5.1 Public home page 16
+Fig 5.2 Developer dashboard 16
+Fig 5.3 Job listing and skill match 17
+Fig 5.4 Recruiter applicant review 17
+Fig 5.5 MySQL jobs demonstration 18

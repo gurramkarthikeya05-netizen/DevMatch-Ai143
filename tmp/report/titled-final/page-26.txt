@@ -1,0 +1,9 @@
+DevMatch AI – Developer Portfolio & Hiring Platform 
+Dept. of ECE, CMRIT 2026-2027 Page 18
+Fig 5.3 Recruiter applicant review
+Interpretation: The recruiter dashboard displays applicants for the recruiter’s own jobs. 
+The illustrated candidate matches Python, Flask and MySQL, giving a 100 percent skill 
+match. The screen identifies the profile as the evidence source and states that the resume 
+has not been analyzed. Matched and missing skills help the recruiter interpret the score. 
+The status control allows the recruiter to review and revise the application decision, 
+which is saved to the applications table.

@@ -1,0 +1,12 @@
+DevMatch AI 
+Dept. of ECE, CMRIT 2026-2027 Page 5
+3.2 ER Diagram
+Figure 3.2 shows the entity relationships and their cardinalities. Each profile references 
+exactly one user, and a user has at most one profile of each kind. The application’s role 
+logic selects the appropriate profile. Child entities can have zero or many records for their 
+parent.
+Fig 3.2 Entity relationships and cardinalities
+The developer to job relationship is many to many and is resolved by Application. Each 
+Application belongs to one Developer and one Job. Each Resume analysis and Skill belongs to 
+one Developer. Each Job requirement belongs to one Job. The audit extension stores status 
+transitions for an application.

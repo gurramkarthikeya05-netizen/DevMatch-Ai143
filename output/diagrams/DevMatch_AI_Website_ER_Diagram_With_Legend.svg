@@ -1,0 +1,249 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4200" height="3740" viewBox="0 0 4200 3740" role="img" aria-label="Chen ER diagram for DevMatch AI"><rect width="100%" height="100%" fill="white"/>
+<text x="2100" y="82" font-family="Arial, sans-serif" font-size="58" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">DEVMATCH AI WEBSITE — ER DIAGRAM</text>
+<text x="2100" y="144" font-family="Arial, sans-serif" font-size="30" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Website accounts, portfolios, jobs and applications (selected attributes)</text>
+<polyline points="1940,405 1940,660 1475,660" fill="none" stroke="#242424" stroke-width="3"/>
+<polyline points="1205,660 940,660 940,955" fill="none" stroke="#242424" stroke-width="3"/>
+<polygon points="1340,592 1475,660 1340,728 1205,660" fill="white" stroke="#242424" stroke-width="3"/>
+<text x="1340" y="644" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Owns</text>
+<text x="1340" y="684" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">1 : 1</text>
+<text x="1840" y="624" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">1</text>
+<text x="887" y="899" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">0..1</text>
+<polyline points="2260,405 2260,660 2725,660" fill="none" stroke="#242424" stroke-width="3"/>
+<polyline points="2995,660 3140,660 3140,955" fill="none" stroke="#242424" stroke-width="3"/>
+<polygon points="2860,592 2995,660 2860,728 2725,660" fill="white" stroke="#242424" stroke-width="3"/>
+<text x="2860" y="644" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Owns</text>
+<text x="2860" y="684" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">1 : 1</text>
+<text x="2360" y="624" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">1</text>
+<text x="3090" y="899" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">0..1</text>
+<polyline points="940,1045 940,1320 795,1320" fill="none" stroke="#242424" stroke-width="3"/>
+<polyline points="525,1320 390,1320 390,1635" fill="none" stroke="#242424" stroke-width="3"/>
+<polygon points="660,1252 795,1320 660,1388 525,1320" fill="white" stroke="#242424" stroke-width="3"/>
+<text x="660" y="1304" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Has</text>
+<text x="660" y="1344" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">1 : N</text>
+<text x="988" y="1170" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">1</text>
+<text x="338" y="1568" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">0..N</text>
+<polyline points="1260,1045 1260,1320 1385,1320" fill="none" stroke="#242424" stroke-width="3"/>
+<polyline points="1655,1320 1810,1320 1810,1635" fill="none" stroke="#242424" stroke-width="3"/>
+<polygon points="1520,1252 1655,1320 1520,1388 1385,1320" fill="white" stroke="#242424" stroke-width="3"/>
+<text x="1520" y="1304" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Showcases</text>
+<text x="1520" y="1344" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">1 : N</text>
+<text x="1204" y="1170" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">1</text>
+<text x="1870" y="1568" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">0..N</text>
+<polyline points="3460,1045 3460,1200 3300,1200 3300,1262" fill="none" stroke="#242424" stroke-width="3"/>
+<polyline points="3300,1398 3300,1470 3460,1470 3460,1635" fill="none" stroke="#242424" stroke-width="3"/>
+<polygon points="3300,1262 3435,1330 3300,1398 3165,1330" fill="white" stroke="#242424" stroke-width="3"/>
+<text x="3300" y="1314" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Posts</text>
+<text x="3300" y="1354" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">1 : N</text>
+<text x="3514" y="1135" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">1</text>
+<text x="3520" y="1568" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">0..N</text>
+<polyline points="1100,1045 1100,1130 25,1130 25,2010 55,2010" fill="none" stroke="#242424" stroke-width="3"/>
+<polyline points="325,2010 390,2010 390,2335" fill="none" stroke="#242424" stroke-width="3"/>
+<polygon points="190,1942 325,2010 190,2078 55,2010" fill="white" stroke="#242424" stroke-width="3"/>
+<text x="190" y="1994" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Receives</text>
+<text x="190" y="2034" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">1 : N</text>
+<text x="170" y="1180" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">1</text>
+<text x="336" y="2280" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">0..N</text>
+<polyline points="1100,1045 1100,1170 2250,1170 2250,1642" fill="none" stroke="#242424" stroke-width="3"/>
+<polyline points="2250,1778 2250,2160 2240,2160 2240,2335" fill="none" stroke="#242424" stroke-width="3"/>
+<polygon points="2250,1642 2385,1710 2250,1778 2115,1710" fill="white" stroke="#242424" stroke-width="3"/>
+<text x="2250" y="1694" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Submits</text>
+<text x="2250" y="1734" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">1 : N</text>
+<text x="2180" y="1220" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">1</text>
+<text x="2180" y="2278" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">0..N</text>
+<polyline points="3140,1725 3140,2030 2925,2030" fill="none" stroke="#242424" stroke-width="3"/>
+<polyline points="2655,2030 2560,2030 2560,2335" fill="none" stroke="#242424" stroke-width="3"/>
+<polygon points="2790,1962 2925,2030 2790,2098 2655,2030" fill="white" stroke="#242424" stroke-width="3"/>
+<text x="2790" y="2014" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Receives</text>
+<text x="2790" y="2054" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">1 : N</text>
+<text x="3090" y="1840" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">1</text>
+<text x="2610" y="2278" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">0..N</text>
+<polyline points="3460,1725 3460,1920 3670,1920 3670,1962" fill="none" stroke="#242424" stroke-width="3"/>
+<polyline points="3670,2098 3670,2200 3810,2200 3810,2335" fill="none" stroke="#242424" stroke-width="3"/>
+<polygon points="3670,1962 3805,2030 3670,2098 3535,2030" fill="white" stroke="#242424" stroke-width="3"/>
+<text x="3670" y="2014" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Requires</text>
+<text x="3670" y="2054" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">1 : N</text>
+<text x="3514" y="1840" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">1</text>
+<text x="3870" y="2278" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">0..N</text>
+<polyline points="1650,1725 1650,1885 1490,1885 1490,1962" fill="none" stroke="#242424" stroke-width="3"/>
+<polyline points="1490,2098 1490,2210 1660,2210 1660,2335" fill="none" stroke="#242424" stroke-width="3"/>
+<polygon points="1490,1962 1625,2030 1490,2098 1355,2030" fill="white" stroke="#242424" stroke-width="3"/>
+<text x="1490" y="2014" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Uses</text>
+<text x="1490" y="2054" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">1 : N</text>
+<text x="1710" y="1840" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">1</text>
+<text x="1715" y="2278" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">0..N</text>
+<polyline points="2100,360 2100,205" fill="none" stroke="#242424" stroke-width="3"/>
+<ellipse cx="2100" cy="205" rx="128" ry="44" fill="white" stroke="#242424" stroke-width="2.6"/>
+<text x="2100" y="205" font-family="Arial, sans-serif" font-size="30" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle" text-decoration="underline">User ID</text>
+<polyline points="2100,360 1760,360" fill="none" stroke="#242424" stroke-width="3"/>
+<ellipse cx="1760" cy="360" rx="128" ry="44" fill="white" stroke="#242424" stroke-width="2.6"/>
+<text x="1760" y="360" font-family="Arial, sans-serif" font-size="30" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Name</text>
+<polyline points="2100,360 2440,360" fill="none" stroke="#242424" stroke-width="3"/>
+<ellipse cx="2440" cy="360" rx="128" ry="44" fill="white" stroke="#242424" stroke-width="2.6"/>
+<text x="2440" y="360" font-family="Arial, sans-serif" font-size="30" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Email</text>
+<rect x="1888" y="315" width="424" height="90" fill="white" stroke="#242424" stroke-width="3.2"/>
+<text x="2100" y="360" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">USER</text>
+<polyline points="1100,1000 1100,845" fill="none" stroke="#242424" stroke-width="3"/>
+<ellipse cx="1100" cy="845" rx="128" ry="44" fill="white" stroke="#242424" stroke-width="2.6"/>
+<text x="1100" y="845" font-family="Arial, sans-serif" font-size="30" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle" text-decoration="underline">Developer ID</text>
+<polyline points="1100,1000 760,1000" fill="none" stroke="#242424" stroke-width="3"/>
+<ellipse cx="760" cy="1000" rx="128" ry="44" fill="white" stroke="#242424" stroke-width="2.6"/>
+<text x="760" y="1000" font-family="Arial, sans-serif" font-size="30" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Bio</text>
+<polyline points="1100,1000 1440,1000" fill="none" stroke="#242424" stroke-width="3"/>
+<ellipse cx="1440" cy="1000" rx="128" ry="44" fill="white" stroke="#242424" stroke-width="2.6"/>
+<text x="1440" y="1000" font-family="Arial, sans-serif" font-size="30" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Location</text>
+<rect x="888" y="955" width="424" height="90" fill="white" stroke="#242424" stroke-width="3.2"/>
+<text x="1100" y="1000" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">DEVELOPER PROFILE</text>
+<polyline points="3300,1000 3300,845" fill="none" stroke="#242424" stroke-width="3"/>
+<ellipse cx="3300" cy="845" rx="128" ry="44" fill="white" stroke="#242424" stroke-width="2.6"/>
+<text x="3300" y="845" font-family="Arial, sans-serif" font-size="30" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle" text-decoration="underline">Recruiter ID</text>
+<polyline points="3300,1000 2960,1000" fill="none" stroke="#242424" stroke-width="3"/>
+<ellipse cx="2960" cy="1000" rx="128" ry="44" fill="white" stroke="#242424" stroke-width="2.6"/>
+<text x="2960" y="1000" font-family="Arial, sans-serif" font-size="30" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Company name</text>
+<polyline points="3300,1000 3640,1000" fill="none" stroke="#242424" stroke-width="3"/>
+<ellipse cx="3640" cy="1000" rx="128" ry="44" fill="white" stroke="#242424" stroke-width="2.6"/>
+<text x="3640" y="1000" font-family="Arial, sans-serif" font-size="30" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Website</text>
+<rect x="3088" y="955" width="424" height="90" fill="white" stroke="#242424" stroke-width="3.2"/>
+<text x="3300" y="1000" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">RECRUITER PROFILE</text>
+<polyline points="550,1680 550,1525" fill="none" stroke="#242424" stroke-width="3"/>
+<ellipse cx="550" cy="1525" rx="128" ry="44" fill="white" stroke="#242424" stroke-width="2.6"/>
+<text x="550" y="1525" font-family="Arial, sans-serif" font-size="30" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle" text-decoration="underline">Skill ID</text>
+<polyline points="550,1680 210,1680" fill="none" stroke="#242424" stroke-width="3"/>
+<ellipse cx="210" cy="1680" rx="128" ry="44" fill="white" stroke="#242424" stroke-width="2.6"/>
+<text x="210" y="1680" font-family="Arial, sans-serif" font-size="30" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Skill name</text>
+<polyline points="550,1680 890,1680" fill="none" stroke="#242424" stroke-width="3"/>
+<ellipse cx="890" cy="1680" rx="128" ry="44" fill="white" stroke="#242424" stroke-width="2.6"/>
+<text x="890" y="1680" font-family="Arial, sans-serif" font-size="30" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Level</text>
+<rect x="338" y="1635" width="424" height="90" fill="white" stroke="#242424" stroke-width="3.2"/>
+<text x="550" y="1680" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">SKILL</text>
+<polyline points="1650,1680 1650,1525" fill="none" stroke="#242424" stroke-width="3"/>
+<ellipse cx="1650" cy="1525" rx="128" ry="44" fill="white" stroke="#242424" stroke-width="2.6"/>
+<text x="1650" y="1525" font-family="Arial, sans-serif" font-size="30" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle" text-decoration="underline">Project ID</text>
+<polyline points="1650,1680 1310,1680" fill="none" stroke="#242424" stroke-width="3"/>
+<ellipse cx="1310" cy="1680" rx="128" ry="44" fill="white" stroke="#242424" stroke-width="2.6"/>
+<text x="1310" y="1680" font-family="Arial, sans-serif" font-size="30" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Project name</text>
+<polyline points="1650,1680 1990,1680" fill="none" stroke="#242424" stroke-width="3"/>
+<ellipse cx="1990" cy="1680" rx="128" ry="44" fill="white" stroke="#242424" stroke-width="2.6"/>
+<text x="1990" y="1680" font-family="Arial, sans-serif" font-size="30" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Description</text>
+<rect x="1438" y="1635" width="424" height="90" fill="white" stroke="#242424" stroke-width="3.2"/>
+<text x="1650" y="1680" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">PORTFOLIO PROJECT</text>
+<polyline points="3300,1680 3300,1525" fill="none" stroke="#242424" stroke-width="3"/>
+<ellipse cx="3300" cy="1525" rx="128" ry="44" fill="white" stroke="#242424" stroke-width="2.6"/>
+<text x="3300" y="1525" font-family="Arial, sans-serif" font-size="30" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle" text-decoration="underline">Job ID</text>
+<polyline points="3300,1680 2960,1680" fill="none" stroke="#242424" stroke-width="3"/>
+<ellipse cx="2960" cy="1680" rx="128" ry="44" fill="white" stroke="#242424" stroke-width="2.6"/>
+<text x="2960" y="1680" font-family="Arial, sans-serif" font-size="30" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Job title</text>
+<polyline points="3300,1680 3640,1680" fill="none" stroke="#242424" stroke-width="3"/>
+<ellipse cx="3640" cy="1680" rx="128" ry="44" fill="white" stroke="#242424" stroke-width="2.6"/>
+<text x="3640" y="1680" font-family="Arial, sans-serif" font-size="30" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Location</text>
+<rect x="3088" y="1635" width="424" height="90" fill="white" stroke="#242424" stroke-width="3.2"/>
+<text x="3300" y="1680" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">JOB</text>
+<polyline points="550,2380 550,2225" fill="none" stroke="#242424" stroke-width="3"/>
+<ellipse cx="550" cy="2225" rx="128" ry="44" fill="white" stroke="#242424" stroke-width="2.6"/>
+<text x="550" y="2225" font-family="Arial, sans-serif" font-size="30" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle" text-decoration="underline">Analysis ID</text>
+<polyline points="550,2380 210,2380" fill="none" stroke="#242424" stroke-width="3"/>
+<ellipse cx="210" cy="2380" rx="128" ry="44" fill="white" stroke="#242424" stroke-width="2.6"/>
+<text x="210" y="2380" font-family="Arial, sans-serif" font-size="30" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Summary</text>
+<polyline points="550,2380 890,2380" fill="none" stroke="#242424" stroke-width="3"/>
+<ellipse cx="890" cy="2380" rx="128" ry="44" fill="white" stroke="#242424" stroke-width="2.6"/>
+<text x="890" y="2380" font-family="Arial, sans-serif" font-size="30" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Strengths</text>
+<rect x="338" y="2335" width="424" height="90" fill="white" stroke="#242424" stroke-width="3.2"/>
+<text x="550" y="2380" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">RESUME ANALYSIS</text>
+<polyline points="2400,2380 2400,2225" fill="none" stroke="#242424" stroke-width="3"/>
+<ellipse cx="2400" cy="2225" rx="128" ry="44" fill="white" stroke="#242424" stroke-width="2.6"/>
+<text x="2400" y="2225" font-family="Arial, sans-serif" font-size="30" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle" text-decoration="underline">Application ID</text>
+<polyline points="2400,2380 2060,2380" fill="none" stroke="#242424" stroke-width="3"/>
+<ellipse cx="2060" cy="2380" rx="128" ry="44" fill="white" stroke="#242424" stroke-width="2.6"/>
+<text x="2060" y="2380" font-family="Arial, sans-serif" font-size="30" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Status</text>
+<polyline points="2400,2380 2740,2380" fill="none" stroke="#242424" stroke-width="3"/>
+<ellipse cx="2740" cy="2380" rx="128" ry="44" fill="white" stroke="#242424" stroke-width="2.6"/>
+<text x="2740" y="2380" font-family="Arial, sans-serif" font-size="30" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Date applied</text>
+<rect x="2188" y="2335" width="424" height="90" fill="white" stroke="#242424" stroke-width="3.2"/>
+<text x="2400" y="2380" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">APPLICATION</text>
+<polyline points="3650,2380 3650,2225" fill="none" stroke="#242424" stroke-width="3"/>
+<ellipse cx="3650" cy="2225" rx="128" ry="44" fill="white" stroke="#242424" stroke-width="2.6"/>
+<text x="3650" y="2225" font-family="Arial, sans-serif" font-size="30" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle" text-decoration="underline">Requirement ID</text>
+<polyline points="3650,2380 3310,2380" fill="none" stroke="#242424" stroke-width="3"/>
+<ellipse cx="3310" cy="2380" rx="128" ry="44" fill="white" stroke="#242424" stroke-width="2.6"/>
+<text x="3310" y="2380" font-family="Arial, sans-serif" font-size="30" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Skill name</text>
+<polyline points="3650,2380 3990,2380" fill="none" stroke="#242424" stroke-width="3"/>
+<ellipse cx="3990" cy="2380" rx="128" ry="44" fill="white" stroke="#242424" stroke-width="2.6"/>
+<text x="3990" y="2380" font-family="Arial, sans-serif" font-size="30" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Importance</text>
+<rect x="3438" y="2335" width="424" height="90" fill="white" stroke="#242424" stroke-width="3.2"/>
+<text x="3650" y="2380" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">JOB SKILL</text>
+<polyline points="1500,2380 1500,2225" fill="none" stroke="#242424" stroke-width="3"/>
+<ellipse cx="1500" cy="2225" rx="128" ry="44" fill="white" stroke="#242424" stroke-width="2.6"/>
+<text x="1500" y="2225" font-family="Arial, sans-serif" font-size="30" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle" text-decoration="underline">Technology ID</text>
+<polyline points="1500,2380 1160,2380" fill="none" stroke="#242424" stroke-width="3"/>
+<ellipse cx="1160" cy="2380" rx="128" ry="44" fill="white" stroke="#242424" stroke-width="2.6"/>
+<text x="1160" y="2380" font-family="Arial, sans-serif" font-size="30" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Name</text>
+<polyline points="1500,2380 1840,2380" fill="none" stroke="#242424" stroke-width="3"/>
+<ellipse cx="1840" cy="2380" rx="128" ry="44" fill="white" stroke="#242424" stroke-width="2.6"/>
+<text x="1840" y="2380" font-family="Arial, sans-serif" font-size="30" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Version</text>
+<rect x="1288" y="2335" width="424" height="90" fill="white" stroke="#242424" stroke-width="3.2"/>
+<text x="1500" y="2380" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">PROJECT TECHNOLOGY</text>
+<polyline points="150,2530 4050,2530" fill="none" stroke="#242424" stroke-width="3"/>
+<text x="2100" y="2600" font-family="Arial, sans-serif" font-size="43" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">NOTATION LEGEND</text>
+<rect x="320" y="2678" width="360" height="84" fill="white" stroke="#242424" stroke-width="3"/>
+<text x="500" y="2720" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">ENTITY</text>
+<text x="500" y="2805" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Strong entity</text>
+<text x="500" y="2860" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Has its own primary key</text>
+<rect x="1120" y="2678" width="360" height="84" fill="white" stroke="#242424" stroke-width="3"/><rect x="1130" y="2688" width="340" height="64" fill="white" stroke="#242424" stroke-width="3"/>
+<text x="1300" y="2720" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">WEAK ENTITY</text>
+<text x="1300" y="2805" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Weak entity</text>
+<text x="1300" y="2860" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Owner key + partial key</text>
+<polygon points="2100,2660 2260,2720 2100,2780 1940,2720" fill="white" stroke="#242424" stroke-width="3"/>
+<text x="2100" y="2720" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Relationship</text>
+<text x="2100" y="2805" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Relationship</text>
+<text x="2100" y="2860" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Connects entities</text>
+<ellipse cx="2900" cy="2720" rx="165" ry="45" fill="white" stroke="#242424" stroke-width="3"/>
+<text x="2900" y="2720" font-family="Arial, sans-serif" font-size="31" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Attribute</text>
+<text x="2900" y="2805" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Attribute</text>
+<text x="2900" y="2860" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Describes an entity</text>
+<ellipse cx="3700" cy="2720" rx="165" ry="45" fill="white" stroke="#242424" stroke-width="3"/>
+<text x="3700" y="2720" font-family="Arial, sans-serif" font-size="31" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle" text-decoration="underline">ID</text>
+<text x="3700" y="2805" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Primary key</text>
+<text x="3700" y="2860" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Underlined attribute</text>
+<text x="2100" y="2940" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">All 10 website entities are strong entities. The current design contains no weak entities.</text>
+<text x="2100" y="2990" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Child entities have their own IDs. Depending on a parent through a foreign key does not make them weak.</text>
+<text x="2100" y="3080" font-family="Arial, sans-serif" font-size="43" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">RELATIONSHIP SUMMARY</text>
+<text x="820" y="3170" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Entity pair</text>
+<text x="1640" y="3170" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Relationship</text>
+<text x="1950" y="3170" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Type</text>
+<polyline points="190,3202 2090,3202" fill="none" stroke="#242424" stroke-width="3"/>
+<text x="820" y="3248" font-family="Arial, sans-serif" font-size="31" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">User — Developer profile</text>
+<text x="1640" y="3248" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Owns</text>
+<text x="1950" y="3248" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">1 : 1</text>
+<text x="820" y="3314" font-family="Arial, sans-serif" font-size="31" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">User — Recruiter profile</text>
+<text x="1640" y="3314" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Owns</text>
+<text x="1950" y="3314" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">1 : 1</text>
+<text x="820" y="3380" font-family="Arial, sans-serif" font-size="31" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Developer profile — Skill</text>
+<text x="1640" y="3380" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Has</text>
+<text x="1950" y="3380" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">1 : N</text>
+<text x="820" y="3446" font-family="Arial, sans-serif" font-size="31" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Developer profile — Portfolio project</text>
+<text x="1640" y="3446" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Showcases</text>
+<text x="1950" y="3446" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">1 : N</text>
+<text x="820" y="3512" font-family="Arial, sans-serif" font-size="31" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Portfolio project — Project technology</text>
+<text x="1640" y="3512" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Uses</text>
+<text x="1950" y="3512" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">1 : N</text>
+<text x="2910" y="3170" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Entity pair</text>
+<text x="3730" y="3170" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Relationship</text>
+<text x="4040" y="3170" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Type</text>
+<polyline points="2280,3202 4180,3202" fill="none" stroke="#242424" stroke-width="3"/>
+<text x="2910" y="3248" font-family="Arial, sans-serif" font-size="31" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Developer profile — Resume analysis</text>
+<text x="3730" y="3248" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Receives</text>
+<text x="4040" y="3248" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">1 : N</text>
+<text x="2910" y="3314" font-family="Arial, sans-serif" font-size="31" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Developer profile — Application</text>
+<text x="3730" y="3314" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Submits</text>
+<text x="4040" y="3314" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">1 : N</text>
+<text x="2910" y="3380" font-family="Arial, sans-serif" font-size="31" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Recruiter profile — Job</text>
+<text x="3730" y="3380" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Posts</text>
+<text x="4040" y="3380" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">1 : N</text>
+<text x="2910" y="3446" font-family="Arial, sans-serif" font-size="31" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Job — Job skill</text>
+<text x="3730" y="3446" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Requires</text>
+<text x="4040" y="3446" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">1 : N</text>
+<text x="2910" y="3512" font-family="Arial, sans-serif" font-size="31" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Job — Application</text>
+<text x="3730" y="3512" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">Receives</text>
+<text x="4040" y="3512" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">1 : N</text>
+<text x="2100" y="3590" font-family="Arial, sans-serif" font-size="33" font-weight="700" fill="#14651A" text-anchor="middle" dominant-baseline="middle">M : N  Developer profile — Job, resolved through Application (one application per developer and job)</text>
+<text x="2100" y="3660" font-family="Arial, sans-serif" font-size="30" font-weight="400" fill="#14651A" text-anchor="middle" dominant-baseline="middle">1 = exactly one     0..1 = zero or one     0..N = zero or many     1 : N = one-to-many     M : N = many-to-many</text>
+</svg>

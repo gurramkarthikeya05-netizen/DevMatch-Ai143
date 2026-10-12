@@ -1,0 +1,30 @@
+DevMatch AITitle 
+Dept. of ECE, CMRIT 2026–2027Page 9
+3.3 Database Tables continued
+Portfolio records are separated into skills, projects and project technologies. The 
+developer owns each skill and project, and each technology belongs to a project. This 
+avoids storing a comma separated technology list in the projects table.
+Table 3.2 Portfolio tables
+Table Attribute Type Key or role
+skills id Integer PK
+skills developer_id Integer FK developer_profiles.id
+skills name String(80) Attribute
+skills level String(30) Attribute
+skills years Float Attribute
+projects id Integer PK
+projects developer_id Integer FK developer_profiles.id
+projects name String(140) Attribute
+projects description Text Attribute
+projects github_link String(250) Attribute
+projects project_link String(250) Attribute
+project_technologies id Integer PK
+project_technologies project_id Integer FK projects.id
+project_technologies name String(80) Attribute
+project_technologies category String(40) Attribute
+project_technologies version String(40) Attribute
+project_technologies added_at DateTime Attribute
+The skills table has a uniqueness constraint on developer_id and name. Project 
+technologies are unique on project_id and name. SQLAlchemy relationships provide 
+access to these child rows, and form inputs are parsed into distinct entries before saving. 
+The display properties can join values for presentation without reverting to a multivalued 
+database column.

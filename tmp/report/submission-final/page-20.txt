@@ -1,0 +1,36 @@
+DevMatch AI 
+Dept. of ECE, CMRIT 2026-2027 Page 12
+4.3 Back End Code
+The backend defines the ten application tables as SQLAlchemy models. Password 
+hashing is used for credentials. Session checks restrict authenticated workflows, and role 
+checks protect developer and recruiter routes. Record ownership is checked before 
+profile, job, skill or application changes.
+Account and portfolio modules
+class User(db.Model):
+ __tablename__ = 'users'
+ id = db.Column(db.Integer, primary_key=True)
+ name = db.Column(db.String(120), nullable=False)
+ email = db.Column(db.String(190), unique=True,
+ nullable=False, index=True)
+ password_hash = db.Column(db.String(255),
+ nullable=False)
+ role = db.Column(db.String(20), nullable=False)
+Registration validates account information and creates the role specific profile. Login 
+checks the password hash and stores the authenticated user in the session. The developer 
+portfolio module manages profile fields, skills and projects; technologies entered in a 
+form are stored in project_technologies child rows. Recruiter profile fields describe the 
+company rather than duplicating the shared credential record.
+Application model and uniqueness
+class Application(db.Model):
+ __tablename__ = 'applications'
+ id = db.Column(db.Integer, primary_key=True)
+ developer_id = db.Column(db.Integer,
+ db.ForeignKey('developer_profiles.id'), nullable=False)
+ job_id = db.Column(db.Integer,
+ db.ForeignKey('jobs.id'), nullable=False)
+ status = db.Column(db.String(30), default='Applied',
+ nullable=False)
+ created_at = db.Column(db.DateTime,
+ default=lambda: datetime.now(timezone.utc))
+ __table_args__ = (UniqueConstraint('developer_id',
+ 'job_id', name='uq_application'),)

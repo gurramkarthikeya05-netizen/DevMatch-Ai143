@@ -1,0 +1,4 @@
+DevMatch AITitle 
+Dept. of ECE, CMRIT 2026–2027Page 8
+Email is unique and the stored credential is a password hash. Phone and web links remain strings. 
+User credentials are stored once and are referenced by the role specific profile.

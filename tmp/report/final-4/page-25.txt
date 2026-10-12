@@ -1,0 +1,11 @@
+DevMatch AI 
+Dept. of ECE, CMRIT 2026–2027Page 17
+5.1 Result Snapshots continued
+Fig 5.3 Job listing and skill match
+The job listing in Fig 5.3 connects each vacancy to company details and presents the developer’s 
+skill coverage. Matching uses profile and latest resume skills. Search and filtering operate on 
+database backed vacancy records, and existing applications are marked in the interface.
+Fig 5.4 Recruiter applicant review
+Fig 5.4 displays a 100 percent match for Python, Flask and MySQL, with all three supplied by the 
+profile. The interface explicitly indicates that the resume has not been analyzed. The recruiter sees 
+matched and missing evidence and can change the decision through the status control.

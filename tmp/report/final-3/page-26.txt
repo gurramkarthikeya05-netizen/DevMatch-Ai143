@@ -1,0 +1,23 @@
+DevMatch AI 
+Dept. of ECE, CMRIT 2026–2027Page 18
+5.1 Result Snapshots continued
+Fig 5.5 MySQL jobs demonstration
+Fig 5.5 displays current jobs queried from MySQL. This page supports comparing SQL records 
+with the website. The schema verifier was executed against the local database and passed for all 
+ten application tables. Table 5.1 records the observed counts; the audit extension was present too.
+Table 5.1 Database verification results
+Table Rows Attributes Related
+users 12 6 Yes
+developer_profiles 6 10 Yes
+recruiter_profiles 6 6 Yes
+skills 15 5 Yes
+projects 5 6 Yes
+project_technologies 10 6 Yes
+jobs 15 10 Yes
+job_skills 27 6 Yes
+applications 10 5 Yes
+resume_analysis 6 7 Yes
+application_status_history 7 5 Yes
+The observed result confirms the row, attribute and relationship minimums. Developer and 
+recruiter login, dashboards and job pages loaded during screenshot capture. These observations do 
+not establish production capacity or semantic accuracy of AI analysis.

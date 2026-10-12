@@ -1,0 +1,18 @@
+VISVESVARAYA TECHNOLOGICAL UNIVERSITY
+Jnana Sangama, Belagavi-590018
+A Database Management System Mini Project Report on
+DevMatch AI – Developer Portfolio & Hiring Platform
+Submitted in Partial fulfillment of the Requirements for the VII Semester of the Degree of
+Bachelor of Engineering in
+Electronics and Communication Engineering
+By
+Name ____________________ USN ____________________
+Name ____________________ USN ____________________
+Name ____________________ USN ____________________
+Under the Guidance of,
+Guide name ____________________ Designation ____________________
+DEPARTMENT OF ELECTRONICS AND COMMUNICATION ENGINEERING
+CMR INSTITUTE OF TECHNOLOGY
+Affiliated to VTU, Approved by AICTE, Accredited by NBA and NAAC with “A++” Grade
+ITPL MAIN ROAD, BROOKFIELD, BENGALURU-560037, KARNATAKA, INDIA 
+2026-27

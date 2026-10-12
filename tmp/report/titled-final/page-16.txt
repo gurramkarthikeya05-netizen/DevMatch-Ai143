@@ -1,0 +1,28 @@
+DevMatch AI – Developer Portfolio & Hiring Platform 
+Dept. of ECE, CMRIT 2026-2027 Page 8
+3.3 Database Tables continued
+Jobs contain vacancy details while job_skills stores one named requirement per row. The 
+recruiter_id foreign key connects each vacancy to its owner. Table 3.3 lists the job 
+columns and requirement attributes.
+Table 3.3 Job tables
+Table Attribute Type Key or role
+jobs id Integer PK
+jobs recruiter_id Integer FK recruiter_profiles.id
+jobs title String(150) Attribute
+jobs description Text Attribute
+jobs location String(100) Attribute
+jobs salary String(100) Attribute
+jobs experience_required String(100) Attribute
+jobs job_type String(40) Attribute
+jobs deadline Date Attribute
+jobs created_at DateTime Attribute
+job_skills id Integer PK
+job_skills job_id Integer FK jobs.id
+job_skills name String(80) Attribute
+job_skills importance String(20) Attribute
+job_skills minimum_years Float Attribute
+job_skills added_at DateTime Attribute
+The job_id and name pair is unique in job_skills. Each job is linked to its recruiter 
+through recruiter_id, and each requirement is linked to its job through job_id. These 
+relationships support job management and skill matching without storing comma 
+separated skill values in the jobs table.

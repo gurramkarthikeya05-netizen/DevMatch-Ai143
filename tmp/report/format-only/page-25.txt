@@ -1,0 +1,9 @@
+DevMatch AI 
+Dept. of ECE, CMRIT 2026-2027 Page 17
+Fig 5.2 Job listing and skill match
+Interpretation: The job page displays vacancies with company details, location, required 
+skills and the developer’s skill match. Search fields filter the current database records. 
+The match is calculated from the intersection of recorded job skills with profile skills and 
+the latest extracted resume skills. The application action depends on login, the closing 
+date and whether an application already exists. This result connects the jobs, job_skills, 
+recruiter_profiles and applications tables in one workflow.

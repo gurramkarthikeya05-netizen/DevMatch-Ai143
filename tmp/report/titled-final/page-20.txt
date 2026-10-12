@@ -1,0 +1,40 @@
+DevMatch AI – Developer Portfolio & Hiring Platform 
+Dept. of ECE, CMRIT 2026-2027 Page 12
+4.3 Back-end Code
+The backend defines the ten application tables as SQLAlchemy models. Password 
+hashing is used for credentials. Session checks restrict authenticated workflows, and role 
+checks protect developer and recruiter routes. Record ownership is checked before 
+profile, job, skill or application changes.
+Account and portfolio modules
+# Login module excerpt
+user = User.query.filter_by(email=email).first()
+if user and check_password_hash(user.password_hash, password):
+ session.clear()
+ session['uid'] = user.id
+ return redirect(url_for('dashboard'))
+# Profile module excerpt
+profile = (user.developer if user.role == 'developer'
+ else user.recruiter)
+for field in fields:
+ value = request.form.get(field, '').strip()
+ setattr(profile, field, value)
+db.session.commit()
+Registration validates account information and creates the role specific profile. Login 
+checks the password hash and stores the authenticated user in the session. The developer 
+portfolio module manages profile fields, skills and projects; technologies entered in a 
+form are stored in project_technologies child rows. Recruiter profile fields describe the 
+company rather than duplicating the shared credential record.
+Application model and uniqueness
+class Application(db.Model):
+ __tablename__ = 'applications'
+ id = db.Column(db.Integer, primary_key=True)
+ developer_id = db.Column(db.Integer,
+ db.ForeignKey('developer_profiles.id'), nullable=False)
+ job_id = db.Column(db.Integer,
+ db.ForeignKey('jobs.id'), nullable=False)
+ status = db.Column(db.String(30), default='Applied',
+ nullable=False)
+ created_at = db.Column(db.DateTime,
+ default=lambda: datetime.now(timezone.utc))
+ __table_args__ = (UniqueConstraint('developer_id',
+ 'job_id', name='uq_application'),)
